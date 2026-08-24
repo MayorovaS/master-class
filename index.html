@@ -23,9 +23,12 @@
         <a href="https://wa.me" target="_blank" class="btn-book">Записаться</a>
     </header>
 
-    <!-- Главный экран: Роскошный бордовый фон -->
+    <!-- Главный экран: Бордовый фон + Логотип-матрешка по центру -->
     <section id="about" class="hero-premium-maroon">
         <div class="hero-content">
+            <div class="logo-matreshka-frame">
+                <img src="I.webp" alt="Мастерская Впечатлений" class="matreshka-logo-img">
+            </div>
             <span class="hero-tag">Творческое пространство</span>
             <h1>Создано руками —<br><span class="highlight-italic">наполнено эмоциями</span></h1>
             <p class="hero-pitch">Премиальная арт-студия в Апрелевке. Место, где стираются границы между ремеслом и высоким искусством в атмосфере абсолютного уюта и вдохновения.</p>
@@ -41,82 +44,72 @@
         </div>
     </div>
 
-    <!-- Каталог направлений -->
+    <!-- Новая журнальная секция направлений -->
     <section id="master-classes" class="catalog-section">
         <div class="catalog-header">
             <h2>Наши <span>направления</span></h2>
-            <p class="catalog-subtitle">Искусство, рождающееся в ваших руках. Нажмите на карточку для записи.</p>
             <div class="luxury-divider"></div>
         </div>
 
-        <div class="premium-catalog-grid">
+        <div class="journal-layout-container">
             
-            <!-- Карточка 1: Детская одежда (i-1.webp) -->
-            <a href="https://wa.me" target="_blank" class="luxury-card">
-                <div class="card-image-box">
-                    <img src="i-1.webp" alt="Роспись одежды и сумок">
-                </div>
-                <div class="card-info">
-                    <span class="card-category">Детям</span>
-                    <h3>Роспись одежды & Шоперов</h3>
-                    <p>Тай-Дай, яркая роспись фигур и создание уникальных дизайнерских вещей своими руками.</p>
-                </div>
-            </a>
-
-            <!-- Карточка 2: Детская мозаика (i-3.webp) -->
-            <a href="https://wa.me" target="_blank" class="luxury-card">
-                <div class="card-image-box">
-                    <img src="i-3.webp" alt="Декупаж и мозаика">
-                </div>
-                <div class="card-info">
-                    <span class="card-category">Детям</span>
-                    <h3>Сложная мозаика & Декупаж</h3>
-                    <p>Мыловарение с картинкой, создание памятных магнитов и увлекательное прикладное творчество.</p>
-                </div>
-            </a>
-
-            <!-- Карточка 3: Взрослые свечи и диффузоры (i-2.webp) -->
-            <a href="https://wa.me" target="_blank" class="luxury-card">
-                <div class="card-image-box">
-                    <img src="i-2.webp" alt="Создание свечей">
-                </div>
-                <div class="card-info">
-                    <span class="card-category">Взрослым</span>
-                    <h3>Магия огня и аромата</h3>
-                    <p>Магия огня и аромата (свечи), аромат в интерьере (диффузоры) и изысканная парфюмерия для дома.</p>
-                </div>
-            </a>
-
-            <!-- ВМЕСТО 4 ФОТО — КАРТОЧКА С ДЕВОЧКОЙ В ОВАЛЕ И ВСЕМИ ОСТАЛЬНЫМИ НАПРАВЛЕНИЯМИ -->
-            <div class="luxury-card adults-list-card">
-                <div class="card-mini-oval">
-                    <img src="girl.jpg" alt="Мастерская Впечатлений">
-                </div>
-                <div class="card-info">
-                    <span class="card-category">Взрослым</span>
-                    <h3>Арт-объекты & Живопись</h3>
-                    <p class="adults-bullet-text">
-                        • Зеркало как арт-объект<br>
-                        • Гипсовая живопись (роспись фигур)<br>
-                        • Концепт «Новая русская матрешка»<br>
-                        • Интерьерные картины акрилом и поталью<br>
-                        • Объемные фактурные полотна
-                    </p>
-                </div>
+            <!-- Левая сторона: Вертикальная лента из твоих трех сочных фото -->
+            <div class="journal-photos-left">
+                <div class="journal-img-box"><img src="i-1.webp" alt="Детское творчество"></div>
+                <div class="journal-img-box"><img src="i-2.webp" alt="Создание свечей"></div>
+                <div class="journal-img-box"><img src="i-3.webp" alt="Прикладное искусство"></div>
             </div>
 
+            <!-- Правая сторона: Красивые прописные списки всех направлений -->
+            <div class="journal-lists-right">
+                
+                <!-- Блок: Детям -->
+                <div class="journal-list-block">
+                    <span class="list-mini-badge">направление</span>
+                    <h3>Детские мастер-классы</h3>
+                    <ul class="cursive-class-list">
+                        <li>Роспись авторских футболок и холщовых шоперов</li>
+                        <li>Тай-Дай: яркая роспись фигур и дизайнерские футболки</li>
+                        <li>Сложная фигурная мозаика и увлекательный декупаж</li>
+                        <li>Мыловарение с картинкой и создание памятных магнитов</li>
+                    </ul>
+                </div>
+
+                <!-- Блок: Взрослым -->
+                <div class="journal-list-block">
+                    <span class="list-mini-badge">направление</span>
+                    <h3>Взрослые мастер-классы</h3>
+                    <ul class="cursive-class-list">
+                        <li>Магия огня и аромата — создание интерьерных свечей</li>
+                        <li>Аромат в интерьере — изящные диффузоры и аромасаше</li>
+                        <li>Зеркало как арт-объект и декор зеркальных полотен</li>
+                        <li>Гипсовая живопись — детальная роспись гипсовых фигур</li>
+                        <li>Эксклюзивный концепт «Новая русская матрешка»</li>
+                        <li>Интерьерные картины акрилом, объемные фактурные полотна и поталь</li>
+                        <li>Стильные сумки из бисера и тафтинг (создание ковров)</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Локация -->
+    <!-- Локация: Рядом с текстом встает ретро-девочка girl.jpg -->
     <section id="location" class="location-section">
         <div class="location-container">
-            <div class="location-info">
+            <div class="location-info-left">
                 <h2>Где рождаются <span>впечатления?</span></h2>
                 <p>Мы находимся в самом сердце деловой жизни города. Переступая наш порог, вы попадаете в оазис приватности, эстетики и красоты.</p>
                 <div class="address-box">
                     <span class="geo-marker">📍</span>
                     <p><strong>Адрес пространства:</strong><br>г. Апрелевка, улица Апрелевская 65Б /2,<br>ДЦ Сириус, 4 этаж</p>
+                </div>
+            </div>
+            
+            <!-- РЕТРО-ДЕВОЧКА ВСТАЛА РЯДОМ С ТЕКСТОМ ЛОКАЦИИ -->
+            <div class="location-girl-right">
+                <div class="location-oval-frame">
+                    <img src="girl.jpg" alt="Мастерская Впечатлений">
                 </div>
             </div>
         </div>
