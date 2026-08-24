@@ -72,24 +72,41 @@ body {
     box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
 }
 
-/* РОСКОШНЫЙ БОРДОВЫЙ ГЛАВНЫЙ ЭКРАН */
+/* БОРДОВЫЙ ГЛАВНЫЙ ЭКРАН */
 .hero-premium-maroon {
     position: relative;
-    height: 85vh;
-    background-color: #5A0000; /* Глубокий премиальный винный тон */
+    height: 90vh;
+    background-color: #5A0000;
     background-image: linear-gradient(135deg, #5A0000 0%, #3D0000 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #ffffff;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 850px;
+}
+
+/* КРАСИВЫЙ КРУГЛЫЙ ОВАЛ ДЛЯ МАТРЕШКИ В ЦЕНТРЕ */
+.logo-matreshka-frame {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 25px auto;
+    border: 3px solid #FFFDF0;
+    box-shadow: 0 0 25px rgba(255, 253, 240, 0.3);
+}
+
+.matreshka-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-tag {
@@ -114,7 +131,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    color: #F0C4CC; /* Изящный розовый акцент для текста */
+    color: #F0C4CC;
 }
 
 .hero-pitch {
@@ -125,11 +142,10 @@ body {
     line-height: 1.7;
 }
 
-/* КНОПКА СЛОНОВАЯ КОСТЬ (С тёмным благородным текстом) */
 .btn-main-ivory {
     display: inline-block;
-    background-color: #FFFDF0; /* Слоновая кость */
-    color: #3D0000; /* Бордовый текст */
+    background-color: #FFFDF0;
+    color: #3D0000;
     padding: 18px 45px;
     text-decoration: none;
     font-weight: 700;
@@ -139,12 +155,6 @@ body {
     border-radius: 50px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-}
-
-.btn-main-ivory:hover {
-    transform: translateY(-3px);
-    background-color: #ffffff;
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.35);
 }
 
 /* Бегущая строка */
@@ -175,9 +185,9 @@ body {
     100% { transform: translate3d(-50%, 0, 0); }
 }
 
-/* Секция каталога */
+/* Каталог направлений: Новая журнальная структура */
 .catalog-section {
-    padding: 100px 6%;
+    padding: 100px 8%;
     background-color: #FFFBF5;
 }
 
@@ -198,13 +208,6 @@ body {
     font-weight: 400;
 }
 
-.catalog-subtitle {
-    font-size: 15px;
-    color: #7A6867;
-    font-style: italic;
-    margin-top: 8px;
-}
-
 .luxury-divider {
     width: 100px;
     height: 1px;
@@ -212,112 +215,93 @@ body {
     margin: 20px auto 0 auto;
 }
 
-/* Сетка карточек */
-.premium-catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+/* Контейнер журнальной структуры */
+.journal-layout-container {
+    display: flex;
+    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: flex-start;
 }
 
-.luxury-card {
-    background-color: #FFFDF0;
-    border: 1px solid #E6DFD3;
+/* Левая сторона: 3 Твоих сочных фото */
+.journal-photos-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 320px;
+}
+
+.journal-img-box {
+    width: 100%;
+    height: 340px;
     border-radius: 16px;
     overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
-.card-image-box {
-    width: 100%;
-    height: 260px;
-    overflow: hidden;
-}
-
-.card-image-box img {
+.journal-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.card-info {
-    padding: 25px;
+/* Правая сторона: Текстовые списки на "воздухе" прописным шрифтом */
+.journal-lists-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 340px;
 }
 
-.card-category {
+.journal-list-block {
+    border-left: 2px solid #8B0000;
+    padding-left: 30px;
+}
+
+.list-mini-badge {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #B57C8A;
     font-weight: 700;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.luxury-card h3 {
+.journal-list-block h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 28px;
     color: #2D2322;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-.card-info p {
-    font-size: 13px;
-    color: #6E6160;
-    line-height: 1.6;
+/* Премиальный прописной шрифт для направлений */
+.cursive-class-list {
+    list-style: none;
 }
 
-/* Стилизация специальной текстовой карточки для взрослых с овалом */
-.adults-list-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFFDF0;
-    padding-top: 25px;
+.cursive-class-list li {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 21px; /* Крупный, читаемый и очень элегантный размер */
+    color: #4A3B3A;
+    padding: 10px 0;
+    line-height: 1.5;
+    border-bottom: 1px dashed #E6DFD3;
 }
 
-.card-mini-oval {
-    width: 150px;
-    height: 190px;
-    border-radius: 80px;
-    overflow: hidden;
-    border: 2px solid #8B0000;
-    box-shadow: 0 8px 20px rgba(139,0,0,0.08);
+.cursive-class-list li:last-child {
+    border-bottom: none;
 }
 
-.card-mini-oval img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.adults-bullet-text {
-    font-size: 13.5px !important;
-    line-height: 1.7 !important;
-    font-weight: 500;
-    color: #4A3B3A !important;
-    margin-top: 5px;
-}
-
-.luxury-card:hover {
-    transform: translateY(-8px);
-    border-color: #B57C8A;
-    box-shadow: 0 20px 40px rgba(181, 124, 138, 0.15);
-}
-
-.luxury-card:hover .card-image-box img {
-    transform: scale(1.06);
-}
-
-/* Локация */
+/* СЕКЦИЯ ЛОКАЦИИ: РЕТРО-ДЕВОЧКА СБОКУ ОТ ТЕКСТА */
 .location-section {
-    padding: 80px 6%;
-    background-color: #FFFBF5;
+    padding: 100px 8%;
+    background-color: #FFFDF0;
     border-top: 1px solid #E6DFD3;
     border-bottom: 1px solid #E6DFD3;
 }
@@ -326,22 +310,23 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: center;
+    gap: 50px;
+    align-items: center;
 }
 
-.location-info {
-    max-width: 650px;
-    text-align: center;
+.location-info-left {
+    flex: 1.2;
+    min-width: 320px;
 }
 
-.location-info h2 {
+.location-info-left h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
+    font-size: 44px;
     color: #2D2322;
     margin-bottom: 20px;
 }
 
-.location-info h2 span {
+.location-info-left h2 span {
     font-style: italic;
     color: #B57C8A;
     font-weight: 400;
@@ -350,17 +335,37 @@ body {
 .address-box {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 15px;
     margin-top: 30px;
-    background: #FFFDF0;
+    background: #FFFBF5;
     padding: 20px;
     border-left: 4px solid #A31D1D;
     border-radius: 4px;
-    text-align: left;
 }
 
-/* Блок контактов — телефон зафиксирован сбоку */
+.location-girl-right {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.location-oval-frame {
+    width: 270px;
+    height: 360px;
+    border-radius: 135px;
+    overflow: hidden;
+    border: 3px solid #8B0000;
+    box-shadow: 0 15px 35px rgba(139,0,0,0.08);
+}
+
+.location-oval-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Блок контактов */
 .booking-section {
     padding: 100px 6%;
     background-color: #FFFBF5;
@@ -414,6 +419,12 @@ body {
     font-size: 38px;
     color: #8B0000;
     margin-bottom: 10px;
+}
+
+.booking-content h2 span {
+    font-style: italic;
+    color: #B57C8A;
+    font-weight: 400;
 }
 
 .status-badge {
@@ -501,104 +512,154 @@ body {
 /* ==========================================================================
    ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
    ========================================================================== */
+/* ==========================================================================
+   ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
+   ========================================================================== */
 @media (max-width: 768px) {
     .navbar {
         padding: 12px 3%;
-    /* Адаптация навигации и меню в одну строку на смартфонах */
-    flex-direction: column;
-    gap: 8px;
-}
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .logo { 
+        font-size: 20px; 
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .nav-links a { 
+        font-size: 10px; 
+        letter-spacing: 0.5px; 
+    }
+    
+    .btn-book { 
+        padding: 8px 16px; 
+        font-size: 10px; 
+        width: 100%; 
+        text-align: center; 
+    }
 
-.logo { 
-    font-size: 20px; 
-}
+    .hero-premium-maroon { 
+        height: 80vh; 
+        padding: 40px 4%; 
+    }
+    
+    .hero-premium-maroon h1 { 
+        font-size: 32px; 
+    }
+    
+    .logo-matreshka-frame { 
+        width: 110px; 
+        height: 140px; 
+    }
+    
+    .hero-pitch { 
+        font-size: 15px; 
+    }
 
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-}
+    .catalog-section { 
+        padding: 50px 4%; 
+    }
+    
+    .catalog-header h2 { 
+        font-size: 32px; 
+    }
+    
+    /* На телефонах фото и списки ложатся в единую красивую пролистываемую ленту */
+    .journal-layout-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .journal-photos-left { 
+        width: 100%; 
+    }
+    
+    .journal-img-box { 
+        height: 260px; 
+    }
+    
+    .journal-lists-right { 
+        width: 100%; 
+        gap: 35px; 
+    }
+    
+    .cursive-class-list li { 
+        font-size: 19px; 
+    }
 
-.nav-links a { 
-    font-size: 10px; 
-    letter-spacing: 0.5px; 
-}
+    /* Локация на телефоне */
+    .location-section { 
+        padding: 50px 4%; 
+    }
+    
+    .location-container { 
+        flex-direction: column; 
+        gap: 30px; 
+        text-align: center; 
+    }
+    
+    .location-info-left h2 { 
+        font-size: 32px; 
+    }
+    
+    .address-box { 
+        text-align: left; 
+    }
+    
+    .location-girl-right { 
+        width: 100%; 
+    }
+    
+    .location-oval-frame { 
+        width: 220px; 
+        height: 300px; 
+    }
 
-.btn-book { 
-    padding: 8px 16px; 
-    font-size: 10px; 
-    width: 100%; 
-    text-align: center; 
-}
-
-/* Мобильный бордовый главный экран */
-.hero-premium-maroon { 
-    height: 75vh; 
-    padding: 40px 4%; 
-}
-
-.hero-premium-maroon h1 { 
-    font-size: 32px; 
-}
-
-.hero-pitch { 
-    font-size: 15px; 
-}
-
-/* Мобильная сетка каталога */
-.catalog-section { 
-    padding: 50px 4%; 
-}
-
-.catalog-header h2 {
-    font-size: 32px;
-}
-
-.premium-catalog-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-}
-
-/* Мобильная карточка контактов */
-.booking-section { 
-    padding: 40px 4%; 
-}
-
-.booking-card {
-    padding: 30px 20px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-}
-
-.hanging-phone-container { 
-    min-width: auto; 
-    margin-bottom: 10px; 
-}
-
-.clean-phone-img { 
-    width: 120px; 
-}
-
-.booking-content h2 { 
-    font-size: 26px; 
-}
-
-.time-table { 
-    flex-direction: column; 
-    gap: 5px; 
-}
-
-.phones-grid { 
-    flex-direction: column; 
-    gap: 15px; 
-    align-items: center; 
-}
-
-.btn-whatsapp-retro { 
-    width: 100%; 
-    text-align: center; 
+    .booking-section { 
+        padding: 40px 4%; 
+    }
+    
+    .booking-card {
+        padding: 30px 20px;
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .hanging-phone-container { 
+        min-width: auto; 
+        margin-bottom: 10px; 
+    }
+    
+    .clean-phone-img { 
+        width: 120px; 
+    }
+    
+    .booking-content h2 { 
+        font-size: 26px; 
+    }
+    
+    .time-table { 
+        flex-direction: column; 
+        gap: 5px; 
+    }
+    
+    .phones-grid { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .btn-whatsapp-retro { 
+        width: 100%; 
+        text-align: center; 
+    }
 }
