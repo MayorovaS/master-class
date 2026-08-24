@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская Впечатлений | Арт-пространство</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="navbar">
+        <div class="logo">Мастерская Впечатлений</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">О пространстве</a></li>
+                <li><a href="#master-classes">Мастер-классы</a></li>
+                <li><a href="#location">Локация</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me" target="_blank" class="btn-book">Записаться</a>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="about" class="hero">
+        <div class="hero-container">
+            <div class="hero-image-wrapper">
+                <img src="i.webp" alt="Мастерская Впечатлений" class="hero-logo-img">
+            </div>
+            <div class="hero-text-block">
+                <span class="hero-tag">Творчество • Вдохновение • Радость</span>
+                <h1>Создано руками —<br><span class="highlight">наполнено эмоциями</span></h1>
+                <p class="hero-pitch">Уникальное пространство в Апрелевке, где стираются границы между ремеслом и высоким искусством. Мы создаем атмосферу благородного уюта, где каждый гость открывает в себе творца.</p>
+                <a href="#master-classes" class="btn-main">Выбрать направление</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Узкий полосатый разделитель перед направлениями -->
+    <div class="divider-stripes-zone">
+        <img src="stripes.jpg" alt="Разделитель" class="narrow-stripe-img">
+    </div>
+
+    <!-- Каталог направлений -->
+    <section id="master-classes" class="catalog-section">
+        <div class="catalog-header">
+            <h2>Наши Направления</h2>
+            <p class="catalog-subtitle">Искусство, рождающееся в ваших руках</p>
+            <div class="luxury-divider"></div>
+        </div>
+
+        <div class="catalog-layout">
+            <!-- Детям -->
+            <div id="kids-dir" class="catalog-column">
+                <div class="column-badge">Детям</div>
+                <ul class="class-list">
+                    <li>Роспись авторских футболок</li>
+                    <li>Роспись холщовых шоперов</li>
+                    <li>Тай-Дай: яркая роспись фигур</li>
+                    <li>Тай-Дай: дизайнерские футболки</li>
+                    <li>Сложная фигурная мозаика</li>
+                    <li>Увлекательный декупаж</li>
+                    <li>Мыловарение с картинкой</li>
+                    <li>Создание памятных магнитов</li>
+                </ul>
+            </div>
+
+            <!-- Девочка в идеальном овале со своим родным фоном -->
+            <div class="catalog-center-art">
+                <div class="oval-frame">
+                    <img src="girl.jpg" alt="Вдохновение" class="oval-girl-img">
+                </div>
+                <div class="center-signature">Для детей и взрослых</div>
+            </div>
+
+            <!-- Взрослым -->
+            <div id="adults-dir" class="catalog-column">
+                <div class="column-badge">Взрослым</div>
+                <ul class="class-list">
+                    <li>Создание интерьерных свечей</li>
+                    <li>Магия аромасаше для дома</li>
+                    <li>Роспись изящных гипсовых фигур</li>
+                    <li>Интерьерные картины (акрил, поталь)</li>
+                    <li>Концепт «Новая русская матрешка»</li>
+                    <li>Роспись трендовых футболок</li>
+                    <li>Роспись джинсовок и шоперов</li>
+                    <li>Объемные фактурные картины</li>
+                    <li>Декупаж старинных шкатулок</li>
+                    <li>Мозаика фигурная премиум</li>
+                    <li>Декор зеркальных полотен</li>
+                    <li>Стильные сумки из бисера</li>
+                    <li>Тафтинг: создание ковров</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Локация -->
+    <section id="location" class="location-section">
+        <div class="location-container">
+            <div class="location-info">
+                <h2>Где рождаются впечатления?</h2>
+                <p>Мы находимся в самом сердце деловой жизни города, но переступая наш порог, вы попадаете в оазис спокойствия и красоты.</p>
+                <div class="address-box">
+                    <span class="geo-marker">📍</span>
+                    <p><strong>Адрес пространства:</strong><br>г. Апрелевка, улица Апрелевская 65Б /2,<br>ДЦ Сириус, 4 этаж</p>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="booking-section">
+        <div class="booking-card">
+            <div class="hanging-phone-container">
+                <div class="clean-phone-box"></div>
+            </div>
+
+            <div class="booking-content">
+                <h2>Посещение пространства</h2>
+                <div class="status-badge">Только по предварительной записи</div>
+                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем индивидуальный график приема.</p>
+                
+                <div class="time-table">
+                    <span class="time-label">Прием звонков и гостей:</span>
+                    <span class="time-value">С 9:30 до 19:00</span>
+                </div>
+
+                <div class="phones-grid">
+                    <div class="phone-item">
+                        <span class="master-name">Юлия</span>
+                        <a href="tel:+79099130410" class="phone-number">8-909-913-04-10</a>
+                    </div>
+                    <div class="phone-item">
+                        <span class="master-name">Анна</span>
+                        <a href="tel:+79856820892" class="phone-number">8 (985) 682-08-92</a>
+                    </div>
+                </div>
+
+                <div class="booking-actions">
+                    <a href="https://wa.me" target="_blank" class="btn-whatsapp-retro">Написать в WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-retro">
+        <p>© 2026 Мастерская Впечатлений. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
