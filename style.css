@@ -26,11 +26,11 @@ body {
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
     font-weight: 700;
     color: #8B0000;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -42,7 +42,7 @@ body {
 .nav-links a {
     color: #4A3B3A;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -50,7 +50,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #A31D1D;
+    color: #B57C8A;
 }
 
 .btn-book {
@@ -64,202 +64,233 @@ body {
     letter-spacing: 1px;
     border-radius: 4px;
     box-shadow: 0 4px 0 #5A0000;
+    transition: all 0.3s ease;
 }
 
-/* Главный экран */
-.hero {
-    padding: 80px 5%;
-    background-color: #FFFDF0;
-    border-bottom: 1px solid #E6DFD3;
+.btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
 }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.hero-image-wrapper {
-    flex: 1;
+/* Главный баннер ( Hero на базе твоего главного логотипа I.webp ) */
+.hero-premium {
+    position: relative;
+    height: 85vh;
+    background: url('I.webp') no-repeat center center/cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
 }
 
-.hero-logo-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(139,0,0,0.06);
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(45, 35, 34, 0.55);
+    z-index: 1;
 }
 
-.hero-text-block {
-    flex: 1.2;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
 }
 
 .hero-tag {
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #A31D1D;
-    font-weight: 700;
+    letter-spacing: 4px;
+    color: #FFFDF0;
+    font-weight: 600;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.hero-text-block h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 58px;
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 62px;
     line-height: 1.1;
-    color: #2D2322;
     margin-bottom: 25px;
 }
 
-.hero-text-block h1 .highlight {
-    color: #8B0000;
+.hero-content h1 .highlight-italic {
+    font-family: 'Playfair Display', serif;
     font-style: italic;
+    font-weight: 400;
+    color: #F0C4CC;
 }
 
 .hero-pitch {
-    font-size: 16px;
-    color: #5C4B4A;
-    margin-bottom: 35px;
+    font-size: 18px;
+    color: #FFFDF0;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.7;
 }
 
-.btn-main {
+/* Сочная кнопка с золотой дымкой */
+.btn-main-accent {
     display: inline-block;
-    background-color: #2D2322;
+    background-color: #8B0000;
     color: #FFFDF0;
-    padding: 16px 35px;
+    padding: 18px 45px;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.4);
+    transition: all 0.3s ease;
 }
 
-/* ПОЛОСАТЫЙ РАЗДЕЛИТЕЛЬ ПОЛНОСТЬЮ УБРАН ИЗ КОДА */
-.divider-stripes-zone {
-    display: none;
+.btn-main-accent:hover {
+    transform: translateY(-3px);
+    background-color: #A31D1D;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
 }
 
-/* Каталог направлений */
+/* Бегущая строка */
+.marquee-zone {
+    background-color: #2D2322;
+    color: #FFFBF5;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid #4A3B3A;
+    border-bottom: 1px solid #4A3B3A;
+}
+
+.marquee-track {
+    display: inline-block;
+    animation: marquee-move 25s linear infinite;
+}
+
+.marquee-track span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-right: 40px;
+}
+
+@keyframes marquee-move {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Секция каталога */
 .catalog-section {
-    padding: 60px 5% 100px 5%;
+    padding: 100px 6%;
     background-color: #FFFBF5;
 }
 
 .catalog-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .catalog-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 46px;
-    color: #8B0000;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #2D2322;
+}
+
+.catalog-header h2 span {
+    font-style: italic;
+    color: #B57C8A;
+    font-weight: 400;
 }
 
 .catalog-subtitle {
     font-size: 15px;
     color: #7A6867;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .luxury-divider {
-    width: 140px;
-    height: 2px;
+    width: 100px;
+    height: 1px;
     background-color: #8B0000;
-    margin: 15px auto 0 auto;
+    margin: 20px auto 0 auto;
 }
 
-/* Сетка каталога */
-.catalog-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1300px;
-    margin: 40px auto 0 auto;
-    gap: 20px;
-    flex-wrap: wrap;
+/* Сетка карточек */
+.premium-catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.catalog-column {
-    flex: 1;
-    min-width: 290px;
+.luxury-card {
     background-color: #FFFDF0;
-    border: 2px solid #8B0000;
-    padding: 40px 25px;
-    border-radius: 8px;
-    box-shadow: 8px 8px 0px rgba(139, 0, 0, 0.05);
-}
-
-.column-badge {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #8B0000;
-    text-align: center;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #E6DFD3;
-    padding-bottom: 10px;
-}
-
-.class-list {
-    list-style: none;
-}
-
-.class-list li {
-    font-size: 15px;
-    font-weight: 600;
-    color: #4A3B3A;
-    padding: 11px 0;
-    border-bottom: 1px dashed #E6DFD3;
-}
-
-/* Девочка в овале */
-.catalog-center-art {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 320px;
-    margin-top: 20px;
-}
-
-.oval-frame {
-    width: 320px;
-    height: 420px;
-    border-radius: 160px;
+    border: 1px solid #E6DFD3;
+    border-radius: 16px;
     overflow: hidden;
-    border: 3px solid #8B0000;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.oval-girl-img {
+.card-image-box {
+    width: 100%;
+    height: 260px; /* Оптимальная высота, чтобы фото раскрывались сочно */
+    overflow: hidden;
+}
+
+.card-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.center-signature {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-style: italic;
+.card-info {
+    padding: 25px;
+}
+
+.card-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #B57C8A;
     font-weight: 700;
-    color: #A31D1D;
-    margin-top: 15px;
-    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.luxury-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #2D2322;
+    margin-bottom: 12px;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: #6E6160;
+    line-height: 1.6;
+}
+
+/* Интерактивное увеличение фото */
+.luxury-card:hover {
+    transform: translateY(-8px);
+    border-color: #B57C8A;
+    box-shadow: 0 20px 40px rgba(181, 124, 138, 0.15);
+}
+
+.luxury-card:hover .card-image-box img {
+    transform: scale(1.06);
 }
 
 /* Локация */
 .location-section {
-    padding: 80px 5%;
+    padding: 80px 6%;
     background-color: #FFFBF5;
     border-top: 1px solid #E6DFD3;
     border-bottom: 1px solid #E6DFD3;
@@ -269,32 +300,43 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 50px;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.location-info {
+    max-width: 650px;
+    text-align: center;
 }
 
 .location-info h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 40px;
     color: #2D2322;
     margin-bottom: 20px;
 }
 
+.location-info h2 span {
+    font-style: italic;
+    color: #B57C8A;
+    font-weight: 400;
+}
+
 .address-box {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     margin-top: 30px;
     background: #FFFDF0;
     padding: 20px;
-    border-left: 5px solid #A31D1D;
+    border-left: 4px solid #A31D1D;
     border-radius: 4px;
+    text-align: left;
 }
 
 /* Блок контактов */
 .booking-section {
-    padding: 100px 5%;
+    padding: 100px 6%;
     background-color: #FFFBF5;
     display: flex;
     justify-content: center;
@@ -336,15 +378,17 @@ body {
     100% { transform: rotate(-5deg); }
 }
 
-.booking-content {
-    flex: 2;
-}
-
 .booking-content h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 38px;
     color: #8B0000;
     margin-bottom: 10px;
+}
+
+.booking-content h2 span {
+    font-style: italic;
+    color: #B57C8A;
+    font-weight: 400;
 }
 
 .status-badge {
@@ -430,164 +474,82 @@ body {
 }
 
 /* ==========================================================================
-   ИСПРАВЛЕННАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (МЕНЮ В 1 СТРОКУ, ФОТО НАВЕРХУ)
+   ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
    ========================================================================== */
 @media (max-width: 768px) {
-    
-    /* Шапка: логотип по центру, меню строго в одну строчку мелким шрифтом */
     .navbar {
         padding: 12px 3%;
         flex-direction: column;
         gap: 8px;
-        text-align: center;
     }
     
-    .logo {
-        font-size: 20px;
-    }
+    .logo { font-size: 20px; }
     
     .nav-links {
         display: flex;
-        flex-direction: row; /* Принудительно в одну линию */
+        flex-direction: row;
         justify-content: center;
-        gap: 12px; /* Компактные отступы, чтобы всё поместилось */
+        gap: 12px;
         width: 100%;
     }
     
-    .nav-links a {
-        font-size: 10px; /* Уменьшаем размер, чтобы не разваливалось */
-        letter-spacing: 0.5px;
-    }
+    .nav-links a { font-size: 10px; letter-spacing: 0.5px; }
     
-    .btn-book {
-        padding: 8px 16px;
-        font-size: 10px;
-        width: 100%;
-        text-align: center;
-    }
+    .btn-book { padding: 8px 16px; font-size: 10px; width: 100%; text-align: center; }
 
-    /* Главный экран: ПЕРЕНОСИМ КАРТИНКУ НАВЕРХ ТЕКСТА */
-    .hero {
-        padding: 30px 4%;
-    }
-    
-    .hero-container {
-        flex-direction: column; /* Элементы встают друг под друга */
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .hero-image-wrapper {
-        order: -1; /* Картинка с матрешкой принудительно улетает в самый верх */
-        width: 100%;
-        max-width: 260px; /* Аккуратный размер на телефоне */
-        margin: 0 auto;
-    }
-    
-    .hero-text-block {
-        width: 100%;
-    }
-    
-    .hero-text-block h1 {
-        font-size: 30px;
-    }
-    
-    .hero-pitch {
-        font-size: 14px;
-    }
+    .hero-premium { height: 75vh; padding: 40px 4%; }
+    .hero-content h1 { font-size: 38px; }
+    .hero-pitch { font-size: 15px; }
 
-    /* Секция каталога */
-    .catalog-section {
-        padding: 40px 4%;
+    .catalog-section { padding: 50px 4%; }
+    /* Мобильные настройки каталога и сетки карточек */
+    .catalog-header h2 { 
+        font-size: 32px; 
     }
     
-    .catalog-header h2 {
-        font-size: 32px;
+    .premium-catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
     
-    .catalog-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+    /* Мобильные настройки карточки контактов */
+    .booking-section { 
+        padding: 40px 4%; 
     }
     
-    .catalog-column {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .catalog-center-art {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    /* Настройки овала девочки на телефоне */
-    .oval-frame {
-        width: 280px;
-        height: 380px;
-    }
-
-    /* Локация */
-    .location-section {
-        padding: 40px 4%;
-    }
-
-    .location-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .location-info h2 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    /* Карточка контактов */
-    .booking-section {
-        padding: 40px 4%;
-    }
-
     .booking-card {
         padding: 30px 20px;
         flex-direction: column;
         align-items: center;
         gap: 20px;
         text-align: center;
-        box-shadow: 8px 8px 0px #A31D1D;
     }
-
-    .hanging-phone-container {
-        min-width: auto;
-        margin-bottom: 10px;
+    
+    .hanging-phone-container { 
+        min-width: auto; 
+        margin-bottom: 10px; 
     }
-
-    .clean-phone-img {
-        width: 120px;
+    
+    .clean-phone-img { 
+        width: 120px; 
     }
-
-    .booking-content h2 {
-        font-size: 26px;
+    
+    .booking-content h2 { 
+        font-size: 26px; 
     }
-
-    .time-table {
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-        padding: 10px;
+    
+    .time-table { 
+        flex-direction: column; 
+        gap: 5px; 
     }
-
-    .phones-grid {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+    
+    .phones-grid { 
+        flex-direction: column; 
+        gap: 15px; 
     }
-
-    .phone-number {
-        font-size: 22px;
-    }
-
-    .btn-whatsapp-retro {
-        width: 100%;
-        text-align: center;
-        padding: 12px 20px;
+    
+    .btn-whatsapp-retro { 
+        width: 100%; 
+        text-align: center; 
     }
 }
