@@ -1,555 +1,161 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская Впечатлений | Арт-пространство</title>
+    <!-- Шрифты для дорогого и стильного визуала -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFFBF5;
-    color: #2D2322;
-    line-height: 1.6;
-}
+    <!-- Шапка сайта -->
+    <header class="navbar">
+        <div class="logo">Мастерская Впечатлений</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">О пространстве</a></li>
+                <li><a href="#master-classes">Направления</a></li>
+                <li><a href="#location">Локация</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me" target="_blank" class="btn-book">Записаться</a>
+    </header>
 
-/* Навигация */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 6%;
-    background-color: #FFFDF0;
-    border-bottom: 2px solid #8B0000;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    <!-- Главный экран на базе твоего файла I.webp -->
+    <section id="about" class="hero-premium">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Творческое пространство</span>
+            <h1>Создано руками —<br><span class="highlight-italic">наполнено эмоциями</span></h1>
+            <p class="hero-pitch">Премиальная арт-студия в Апрелевке. Место, где стираются границы между ремеслом и высоким искусством в атмосфере абсолютного уюта и вдохновения.</p>
+            <a href="#master-classes" class="btn-main-accent">Выбрать направление</a>
+        </div>
+    </section>
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #8B0000;
-    letter-spacing: 0.5px;
-}
+    <!-- Бегущая строка -->
+    <div class="marquee-zone">
+        <div class="marquee-track">
+            <span>ТВОРЧЕСТВО • ВДОХНОВЕНИЕ • ЭСТЕТИКА • РАДОСТЬ • АТМОСФЕРА ДЛЯ ДУШИ • </span>
+            <span>ТВОРЧЕСТВО • ВДОХНОВЕНИЕ • ЭСТЕТИКА • РАДОСТЬ • АТМОСФЕРА ДЛЯ ДУШИ • </span>
+        </div>
+    </div>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-}
+    <!-- Каталог направлений -->
+    <section id="master-classes" class="catalog-section">
+        <div class="catalog-header">
+            <h2>Наши <span>направления</span></h2>
+            <p class="catalog-subtitle">Искусство, рождающееся в ваших руках. Нажмите на карточку для записи.</p>
+            <div class="luxury-divider"></div>
+        </div>
 
-.nav-links a {
-    color: #4A3B3A;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
+        <div class="premium-catalog-grid">
+            
+            <!-- Карточка 1: Детская одежда (Твоё фото i-1.webp) -->
+            <a href="https://wa.me" target="_blank" class="luxury-card">
+                <div class="card-image-box">
+                    <img src="i-1.webp" alt="Роспись одежды и сумок">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Детям</span>
+                    <h3>Роспись одежды & Шоперов</h3>
+                    <p>Тай-Дай, яркая роспись фигур и создание уникальных дизайнерских вещей своими руками.</p>
+                </div>
+            </a>
 
-.nav-links a:hover {
-    color: #B57C8A;
-}
+            <!-- Карточка 2: Детская мозаика (Твоё фото i-3.webp) -->
+            <a href="https://wa.me" target="_blank" class="luxury-card">
+                <div class="card-image-box">
+                    <img src="i-3.webp" alt="Декупаж и мозаика">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Детям</span>
+                    <h3>Сложная мозаика & Декупаж</h3>
+                    <p>Мыловарение с картинкой, создание памятных магнитов и увлекательное прикладное творчество.</p>
+                </div>
+            </a>
 
-.btn-book {
-    background-color: #A31D1D;
-    color: #FFFDF0;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    box-shadow: 0 4px 0 #5A0000;
-    transition: all 0.3s ease;
-}
+            <!-- Карточка 3: Взрослые свечи и диффузоры (Твоё фото i-2.webp) -->
+            <a href="https://wa.me" target="_blank" class="luxury-card">
+                <div class="card-image-box">
+                    <img src="i-2.webp" alt="Создание свечей">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Взрослым</span>
+                    <h3>Магия огня и аромата</h3>
+                    <p>Магия огня и аромата (свечи), аромат в интерьере (диффузоры) и изысканная парфюмерия для дома.</p>
+                </div>
+            </a>
 
-.btn-book:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
-}
+            <!-- Карточка 4: Взрослый арт (Твоё главное фото I.webp) -->
+            <a href="https://wa.me" target="_blank" class="luxury-card">
+                <div class="card-image-box">
+                    <img src="I.webp" alt="Арт-объекты">
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Взрослым</span>
+                    <h3>Арт-объекты & Живопись</h3>
+                    <p>Зеркало как арт-объект, гипсовая живопись (роспись фигур) и концепт «Новая русская матрешка».</p>
+                </div>
+            </a>
 
-/* Главный баннер ( Hero на базе твоего главного логотипа I.webp ) */
-.hero-premium {
-    position: relative;
-    height: 85vh;
-    background: url('I.webp') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 20px;
-}
+        </div>
+    </section>
 
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(45, 35, 34, 0.55);
-    z-index: 1;
-}
+    <!-- Локация -->
+    <section id="location" class="location-section">
+        <div class="location-container">
+            <div class="location-info">
+                <h2>Где рождаются <span>впечатления?</span></h2>
+                <p>Мы находимся в самом сердце деловой жизни города. Переступая наш порог, вы попадаете в оазис приватности, эстетики и красоты.</p>
+                <div class="address-box">
+                    <span class="geo-marker">📍</span>
+                    <p><strong>Адрес пространства:</strong><br>г. Апрелевка, улица Апрелевская 65Б /2,<br>ДЦ Сириус, 4 этаж</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-}
+    <!-- Контакты -->
+    <section id="contacts" class="booking-section">
+        <div class="booking-card">
+            <div class="hanging-phone-container">
+                <img src="phone.jpg" alt="Запись" class="clean-phone-img">
+            </div>
 
-.hero-tag {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #FFFDF0;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 20px;
-}
+            <div class="booking-content">
+                <h2>Посещение <span>пространства</span></h2>
+                <div class="status-badge">Только по предварительной записи</div>
+                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем строго индивидуальный график приема.</p>
+                
+                <div class="time-table">
+                    <span class="time-label">Прием звонков и гостей:</span>
+                    <span class="time-value">С 09:30 до 19:00</span>
+                </div>
 
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 62px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
+                <div class="phones-grid">
+                    <div class="phone-item">
+                        <span class="master-name">Юлия</span>
+                        <a href="tel:+79099130410" class="phone-number">8-909-913-04-10</a>
+                    </div>
+                    <div class="phone-item">
+                        <span class="master-name">Анна</span>
+                        <a href="tel:+79856820892" class="phone-number">8 (985) 682-08-92</a>
+                    </div>
+                </div>
 
-.hero-content h1 .highlight-italic {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: #F0C4CC;
-}
+                <div class="booking-actions">
+                    <a href="https://wa.me" target="_blank" class="btn-whatsapp-retro">Написать в WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.hero-pitch {
-    font-size: 18px;
-    color: #FFFDF0;
-    margin-bottom: 40px;
-    font-weight: 300;
-    line-height: 1.7;
-}
+    <footer class="footer-retro">
+        <p>© 2026 Мастерская Впечатлений. Все права защищены. Вдохновляем жить красиво.</p>
+    </footer>
 
-/* Сочная кнопка с золотой дымкой */
-.btn-main-accent {
-    display: inline-block;
-    background-color: #8B0000;
-    color: #FFFDF0;
-    padding: 18px 45px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-main-accent:hover {
-    transform: translateY(-3px);
-    background-color: #A31D1D;
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
-}
-
-/* Бегущая строка */
-.marquee-zone {
-    background-color: #2D2322;
-    color: #FFFBF5;
-    padding: 15px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border-top: 1px solid #4A3B3A;
-    border-bottom: 1px solid #4A3B3A;
-}
-
-.marquee-track {
-    display: inline-block;
-    animation: marquee-move 25s linear infinite;
-}
-
-.marquee-track span {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    padding-right: 40px;
-}
-
-@keyframes marquee-move {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
-}
-
-/* Секция каталога */
-.catalog-section {
-    padding: 100px 6%;
-    background-color: #FFFBF5;
-}
-
-.catalog-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.catalog-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    color: #2D2322;
-}
-
-.catalog-header h2 span {
-    font-style: italic;
-    color: #B57C8A;
-    font-weight: 400;
-}
-
-.catalog-subtitle {
-    font-size: 15px;
-    color: #7A6867;
-    font-style: italic;
-    margin-top: 8px;
-}
-
-.luxury-divider {
-    width: 100px;
-    height: 1px;
-    background-color: #8B0000;
-    margin: 20px auto 0 auto;
-}
-
-/* Сетка карточек */
-.premium-catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.luxury-card {
-    background-color: #FFFDF0;
-    border: 1px solid #E6DFD3;
-    border-radius: 16px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.card-image-box {
-    width: 100%;
-    height: 260px; /* Оптимальная высота, чтобы фото раскрывались сочно */
-    overflow: hidden;
-}
-
-.card-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.card-info {
-    padding: 25px;
-}
-
-.card-category {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #B57C8A;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.luxury-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: #2D2322;
-    margin-bottom: 12px;
-}
-
-.card-info p {
-    font-size: 13px;
-    color: #6E6160;
-    line-height: 1.6;
-}
-
-/* Интерактивное увеличение фото */
-.luxury-card:hover {
-    transform: translateY(-8px);
-    border-color: #B57C8A;
-    box-shadow: 0 20px 40px rgba(181, 124, 138, 0.15);
-}
-
-.luxury-card:hover .card-image-box img {
-    transform: scale(1.06);
-}
-
-/* Локация */
-.location-section {
-    padding: 80px 6%;
-    background-color: #FFFBF5;
-    border-top: 1px solid #E6DFD3;
-    border-bottom: 1px solid #E6DFD3;
-}
-
-.location-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-.location-info {
-    max-width: 650px;
-    text-align: center;
-}
-
-.location-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    color: #2D2322;
-    margin-bottom: 20px;
-}
-
-.location-info h2 span {
-    font-style: italic;
-    color: #B57C8A;
-    font-weight: 400;
-}
-
-.address-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-    background: #FFFDF0;
-    padding: 20px;
-    border-left: 4px solid #A31D1D;
-    border-radius: 4px;
-    text-align: left;
-}
-
-/* Блок контактов */
-.booking-section {
-    padding: 100px 6%;
-    background-color: #FFFBF5;
-    display: flex;
-    justify-content: center;
-}
-
-.booking-card {
-    background-color: #FFFDF0;
-    border: 2px solid #2D2322;
-    max-width: 900px;
-    width: 100%;
-    border-radius: 12px;
-    padding: 50px;
-    display: flex;
-    gap: 40px;
-    box-shadow: 12px 12px 0px #A31D1D;
-    flex-wrap: wrap;
-}
-
-.hanging-phone-container {
-    flex: 0.8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 160px;
-}
-
-.clean-phone-img {
-    width: 160px;
-    height: auto;
-    display: block;
-    mix-blend-mode: multiply;
-    animation: sway 3s ease-in-out infinite;
-    transform-origin: top center;
-}
-
-@keyframes sway {
-    0% { transform: rotate(-5deg); }
-    50% { transform: rotate(4deg); }
-    100% { transform: rotate(-5deg); }
-}
-
-.booking-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    color: #8B0000;
-    margin-bottom: 10px;
-}
-
-.booking-content h2 span {
-    font-style: italic;
-    color: #B57C8A;
-    font-weight: 400;
-}
-
-.status-badge {
-    display: inline-block;
-    background-color: #A31D1D;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-}
-
-.schedule-desc {
-    color: #5C4B4A;
-    font-size: 15px;
-    margin-bottom: 25px;
-}
-
-.time-table {
-    background: #FFFBF5;
-    padding: 15px 20px;
-    border-radius: 6px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    border: 1px solid #E6DFD3;
-}
-
-.time-label { color: #7A6867; }
-.time-value { color: #A31D1D; }
-
-.phones-grid {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 35px;
-    flex-wrap: wrap;
-}
-
-.phone-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.master-name {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #7A6867;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.phone-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: #2D2322;
-    text-decoration: none;
-}
-
-.btn-whatsapp-retro {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 16px 40px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    box-shadow: 0 5px 0 #128C7E;
-}
-
-.footer-retro {
-    background-color: #2D2322;
-    color: #FFFDF0;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 13px;
-}
-
-/* ==========================================================================
-   ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
-   ========================================================================== */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 12px 3%;
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .logo { font-size: 20px; }
-    
-    .nav-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-    }
-    
-    .nav-links a { font-size: 10px; letter-spacing: 0.5px; }
-    
-    .btn-book { padding: 8px 16px; font-size: 10px; width: 100%; text-align: center; }
-
-    .hero-premium { height: 75vh; padding: 40px 4%; }
-    .hero-content h1 { font-size: 38px; }
-    .hero-pitch { font-size: 15px; }
-
-    .catalog-section { padding: 50px 4%; }
-    /* Мобильные настройки каталога и сетки карточек */
-    .catalog-header h2 { 
-        font-size: 32px; 
-    }
-    
-    .premium-catalog-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    /* Мобильные настройки карточки контактов */
-    .booking-section { 
-        padding: 40px 4%; 
-    }
-    
-    .booking-card {
-        padding: 30px 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .hanging-phone-container { 
-        min-width: auto; 
-        margin-bottom: 10px; 
-    }
-    
-    .clean-phone-img { 
-        width: 120px; 
-    }
-    
-    .booking-content h2 { 
-        font-size: 26px; 
-    }
-    
-    .time-table { 
-        flex-direction: column; 
-        gap: 5px; 
-    }
-    
-    .phones-grid { 
-        flex-direction: column; 
-        gap: 15px; 
-    }
-    
-    .btn-whatsapp-retro { 
-        width: 100%; 
-        text-align: center; 
-    }
-}
+</body>
+</html>
