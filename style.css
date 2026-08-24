@@ -141,22 +141,16 @@ body {
     border-radius: 4px;
 }
 
-/* Узкая полоса разделителя ДО направлений */
+/* ТОТ САМЫЙ ПОЛОСАТЫЙ РАЗДЕЛИТЕЛЬ ИЗ СТАРОГО ДИЗАЙНА */
 .divider-stripes-zone {
     width: 100%;
     height: 14px;
     overflow: hidden;
-    background-color: #FFFBF5;
-    display: flex;
-    align-items: center;
+    background-image: url('stripes.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
     border-top: 1px solid #E6DFD3;
     border-bottom: 1px solid #E6DFD3;
-}
-
-.narrow-stripe-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* Каталог направлений */
@@ -212,7 +206,7 @@ body {
     position: relative;
 }
 
-/* Канцелярская кнопка */
+/* Канцелярская кнопка-булавка */
 .pin-icon {
     width: 55px;
     height: 55px;
@@ -329,7 +323,7 @@ body {
     box-shadow: 10px 10px 0 #2D2322;
 }
 
-/* Блок контактов */
+/* Блок контактов с телефоном сбоку */
 .booking-section {
     padding: 100px 5%;
     background-color: #FFFBF5;
@@ -466,75 +460,115 @@ body {
     font-size: 13px;
 }
 
-
 /* ==========================================================================
-   МОБИЛЬНАЯ АДАПТАЦИЯ (ДЛЯ СМАРТФОНОВ)
+   ИДЕАЛЬНАЯ И НЕЗАМЕТНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
    ========================================================================== */
 @media (max-width: 768px) {
-    
-    /* Шапка сайта для телефона */
     .navbar {
         padding: 15px 4%;
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    
-    .logo {
-        font-size: 22px;
-    }
-    
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .nav-links a {
-        font-size: 12px;
-    }
-    
-    .btn-book {
-        padding: 8px 16px;
-        font-size: 10px;
-        width: 100%;
-        text-align: center;
-    }
+    .logo { font-size: 22px; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .nav-links a { font-size: 12px; }
+    .btn-book { padding: 8px 16px; font-size: 10px; width: 100%; text-align: center; }
 
-    /* Главный баннер */
-    .hero {
-        padding: 40px 4%;
-    }
-    
-    .hero-container {
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .hero-text-block h1 {
-        font-size: 34px;
-    }
-    
-    .hero-pitch {
-        font-size: 14px;
-    }
+    .hero { padding: 40px 4%; }
+    .hero-container { gap: 30px; text-align: center; }
+    .hero-text-block h1 { font-size: 34px; }
+    .hero-pitch { font-size: 14px; }
 
-    /* Секция каталога */
-    .catalog-section {
-        padding: 40px 4%;
-    }
+    .catalog-section { padding: 40px 4%; }
+    .catalog-header h2 { font-size: 32px; }
     
-    .catalog-header h2 {
-        font-size: 32px;
-    }
-    
-    /* Списки ложатся ровно друг под друга, без каши */
+    /* Списки ложатся ровно друг под друга, без каши на экране телефона */
     .catalog-layout {
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 50px;
     }
-    
     .catalog-column {
         width: 100%;
-max-width: 100%;padding: 40px 20px 30px 20px;}/* Корректируем овал девочки для экрана телефона /.catalog-center-art {width: 100%;order: 2; / Ставим девочку аккуратно между списками или под ними */margin-top: 10px;}.oval-frame {width: 260px;height: 340px;}/* Блок Локации и Карта */.location-section {padding: 40px 4%;}.location-container {flex-direction: column;gap: 30px;}.location-info h2 {font-size: 30px;text-align: center;}.map-wrapper {width: 100%;height: 280px;box-shadow: 6px 6px 0 #2D2322;}/* Карточка контактов на телефоне */.booking-section {padding: 40px 4%;}.booking-card {padding: 30px 20px;flex-direction: column;align-items: center;gap: 20px;text-align: center;box-shadow: 8px 8px 0px #A31D1D;}/* Телефон встает ровно по центру сверху карточки */.hanging-phone-container {min-width: auto;margin-bottom: 10px;}.clean-phone-img {width: 120px;}.booking-content h2 {font-size: 28px;}.time-table {flex-direction: column;gap: 5px;align-items: center;padding: 10px;}.phones-grid {flex-direction: column;gap: 15px;align-items: center;}.phone-number {font-size: 22px;}.btn-whatsapp-retro {width: 100%;text-align: center;padding: 12px 20px;}}
+        max-width: 100%;
+    }
+    .catalog-center-art {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .oval-frame {
+        width: 280px;
+        height: 380px;
+    }
+
+    .location-section { padding: 40px 4%; }
+    /* Настройки секции Локации на телефоне */
+    .location-container { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    
+    .location-info h2 { 
+        font-size: 30px; 
+        text-align: center; 
+    }
+    
+    .map-wrapper { 
+        width: 100%; 
+        height: 280px; 
+        box-shadow: 6px 6px 0 #2D2322; 
+    }
+    
+    /* Настройки карточки контактов на телефоне */
+    .booking-section { 
+        padding: 40px 4%; 
+    }
+    
+    .booking-card {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        box-shadow: 8px 8px 0px #A31D1D;
+    }
+    
+    /* На телефоне трубка встает аккуратно по центру над текстом */
+    .hanging-phone-container { 
+        min-width: auto; 
+        margin-bottom: 10px; 
+    }
+    
+    .clean-phone-img { 
+        width: 120px; 
+    }
+    
+    .booking-content h2 { 
+        font-size: 28px; 
+    }
+    
+    .time-table { 
+        flex-direction: column; 
+        gap: 5px; 
+        align-items: center; 
+        padding: 10px; 
+    }
+    
+    .phones-grid { 
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
+    }
+    
+    .phone-number { 
+        font-size: 22px; 
+    }
+    
+    .btn-whatsapp-retro { 
+        width: 100%; 
+        text-align: center; 
+        padding: 12px 20px; 
+    }
+}
