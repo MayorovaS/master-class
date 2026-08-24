@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -72,18 +73,18 @@ body {
     box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
 }
 
-/* Главный экран */
+/* ОБНОВЛЕННЫЙ БЕЖЕВЫЙ ГЛАВНЫЙ ЭКРАН */
 .hero-premium-maroon {
     position: relative;
     height: 90vh;
-    background-color: #5A0000;
-    background-image: linear-gradient(135deg, #5A0000 0%, #3D0000 100%);
+    background-color: #FFFDF0; /* Идеальный бежевый фон (слоновая кость) */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ffffff;
+    color: #2D2322; /* Четкий темный текст для читаемости */
     padding: 40px 20px;
+    border-bottom: 1px solid #E6DFD3;
 }
 
 .hero-content {
@@ -92,15 +93,15 @@ body {
     max-width: 850px;
 }
 
-/* Круглый медальон под маленькую i.webp */
+/* Круглый медальон для матрешки с бордовой каймой */
 .logo-matreshka-frame {
     width: 140px;
     height: 140px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 25px auto;
-    border: 3px solid #FFFDF0;
-    box-shadow: 0 0 25px rgba(255, 253, 240, 0.3);
+    border: 3px solid #8B0000; /* Роскошная бордовая рамка */
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.15);
 }
 
 .matreshka-logo-img {
@@ -113,7 +114,7 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #FFFDF0;
+    color: #8B0000; /* Бордовый тег */
     font-weight: 600;
     display: block;
     margin-bottom: 20px;
@@ -124,28 +125,29 @@ body {
     font-size: 62px;
     line-height: 1.1;
     margin-bottom: 25px;
-    color: #FFFDF0;
+    color: #2D2322;
 }
 
 .hero-premium-maroon h1 .highlight-italic {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 400;
-    color: #F0C4CC;
+    color: #A31D1D; /* Изящный бордовый акцент для курсива */
 }
 
 .hero-pitch {
     font-size: 18px;
-    color: #FFFDF0;
+    color: #5C4B4A;
     margin-bottom: 40px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
 }
 
+/* ОБНОВЛЕННАЯ БОРДОВАЯ КНОПКА С ЗОЛОТЫМ СВЕЧЕНИЕМ */
 .btn-main-ivory {
     display: inline-block;
-    background-color: #FFFDF0;
-    color: #3D0000;
+    background-color: #8B0000; /* Благородный бордовый */
+    color: #FFFDF0; /* Текст цвета слоновой кости */
     padding: 18px 45px;
     text-decoration: none;
     font-weight: 700;
@@ -153,8 +155,14 @@ body {
     font-size: 13px;
     letter-spacing: 2px;
     border-radius: 50px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.25);
     transition: all 0.3s ease;
+}
+
+.btn-main-ivory:hover {
+    transform: translateY(-3px);
+    background-color: #A31D1D;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4); /* Золотая люксовая подсветка */
 }
 
 /* Бегущая строка */
@@ -506,6 +514,7 @@ body {
 }
 
 /* ==========================================================================
+/* ==========================================================================
    ИДЕАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ЖУРНАЛЬНАЯ ЛЕНТА)
    ========================================================================== */
 @media (max-width: 768px) {
@@ -515,7 +524,9 @@ body {
         gap: 8px;
     }
     
-    .logo { font-size: 20px; }
+    .logo { 
+        font-size: 20px; 
+    }
     
     .nav-links {
         display: flex;
@@ -525,12 +536,11 @@ body {
         width: 100%;
     }
     
-    /* Оформление ссылок меню и кнопки на телефоне */
     .nav-links a { 
         font-size: 10px; 
         letter-spacing: 0.5px; 
     }
-
+    
     .btn-book { 
         padding: 8px 16px; 
         font-size: 10px; 
@@ -538,90 +548,100 @@ body {
         text-align: center; 
     }
 
-    /* Мобильный главный бордовый блок */
+    /* Мобильный бежевый главный экран */
     .hero-premium-maroon { 
         height: 80vh; 
         padding: 40px 4%; 
+        background-color: #FFFDF0; 
+        color: #2D2322;
     }
-
+    
     .hero-premium-maroon h1 { 
         font-size: 32px; 
+        color: #2D2322; 
     }
-
+    
+    .hero-premium-maroon h1 .highlight-italic { 
+        color: #A31D1D; 
+    }
+    
     .logo-matreshka-frame { 
         width: 110px; 
         height: 110px; 
+        border-color: #8B0000; 
     }
-
+    
     .hero-pitch { 
         font-size: 15px; 
+        color: #5C4B4A; 
+    }
+    
+    .btn-main-ivory { 
+        background-color: #8B0000; 
+        color: #FFFDF0; 
     }
 
-    /* Мобильный каталог направлений */
     .catalog-section { 
         padding: 50px 4%; 
     }
-
+    
     .catalog-header h2 { 
         font-size: 32px; 
     }
     
-    /* Фотографии и списки перестраиваются в одну удобную журнальную ленту */
     .journal-layout-container {
         flex-direction: column;
         gap: 40px;
     }
-
+    
     .journal-photos-left { 
         width: 100%; 
     }
-
+    
     .journal-img-box { 
         height: 260px; 
     }
-
+    
     .journal-lists-right { 
         width: 100%; 
         gap: 35px; 
     }
-
+    
     .cursive-class-list li { 
         font-size: 19px; 
     }
 
-    /* Мобильная локация и овал с ретро-девочкой */
     .location-section { 
         padding: 50px 4%; 
     }
-
+    
     .location-container { 
         flex-direction: column; 
         gap: 30px; 
         text-align: center; 
     }
-
+    
     .location-info-left h2 { 
         font-size: 32px; 
     }
-
+    
     .address-box { 
         text-align: left; 
     }
-
+    
     .location-girl-right { 
         width: 100%; 
     }
-
+    
     .location-oval-frame { 
         width: 220px; 
         height: 300px; 
     }
 
-    /* Мобильная карточка контактов */
     .booking-section { 
         padding: 40px 4%; 
     }
-
+    
     .booking-card {
         padding: 30px 20px;
         flex-direction: column; 
@@ -634,25 +654,25 @@ body {
         min-width: auto; 
         margin-bottom: 10px; 
     }
-
+    
     .clean-phone-img { 
         width: 120px; 
     }
-
+    
     .booking-content h2 { 
         font-size: 26px; 
     }
-
+    
     .time-table { 
         flex-direction: column; 
         gap: 5px; 
     }
-
+    
     .phones-grid { 
         flex-direction: column; 
         gap: 15px; 
     }
-
+    
     .btn-whatsapp-retro { 
         width: 100%; 
         text-align: center; 
