@@ -144,7 +144,7 @@ body {
     border-radius: 4px;
 }
 
-/* СТИЛИ ДЛЯ НОВОГО БЛОКА «ГОТОВЫЕ ПРОГРАММЫ» (В РЕТРО-СТИЛЕ АФИШИ) */
+/* Блок программ */
 .programs-section {
     padding: 80px 8%;
     background-color: #FFFBF5;
@@ -182,7 +182,7 @@ body {
 .program-card {
     background-color: #FFFDF0;
     border: 1px solid #E6DFD3;
-    border-radius: 16px; /* Мягкие скругления как на фото */
+    border-radius: 16px;
     overflow: hidden;
     width: calc(33.333% - 20px);
     min-width: 280px;
@@ -238,13 +238,13 @@ body {
 .banner-pill {
     display: inline-block;
     margin-top: 30px;
-    background-color: #B05B5B; /* Красивый приглушённый розово-бордовый цвет плашки */
+    background-color: #B05B5B;
     color: #FFFDF0;
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-style: italic;
     padding: 12px 50px;
-    border-radius: 30px; /* Идеальный овал-пилюля как на фото */
+    border-radius: 30px;
     box-shadow: 0 4px 15px rgba(176,91,91,0.2);
 }
 
@@ -585,7 +585,7 @@ body {
     font-size: 13px;
 }
 
-/* МОБИЛЬНАЯ АДАПТАЦИЯ (СТРОГО ДЛЯ СМАРТФОНОВ) */
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -617,7 +617,7 @@ body {
     }
     
     .hero-container {
-        flex-direction: column-reverse; /* АФИША НАВЕРХУ */
+        flex-direction: column-reverse;
         gap: 30px;
     }
     
@@ -648,7 +648,6 @@ body {
         text-align: center;
     }
 
-    /* Мобильная сетка программ: выстраивается в одну колонку */
     .program-card {
         width: 100%;
     }
