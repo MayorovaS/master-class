@@ -4,7 +4,1006 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Мастерская Впечатлений</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFFBF5;
+            color: #2D2322;
+            line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Навигация */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            background-color: #FFFDF0;
+            border-bottom: 2px solid #8B0000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #8B0000;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #4A3B3A;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #A31D1D;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background-color: #A31D1D;
+            color: #FFFDF0;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            box-shadow: 0 4px 0 #5A0000;
+            flex-shrink: 0;
+            transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .btn-book:hover {
+            background-color: #8B0000;
+        }
+
+        .btn-book:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #5A0000;
+        }
+
+        /* Главный экран */
+        .hero {
+            padding: 80px 5%;
+            background-color: #FFFDF0;
+            border-bottom: 1px solid #E6DFD3;
+            width: 100%;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 300px;
+        }
+
+        .hero-logo-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(139, 0, 0, 0.06);
+        }
+
+        .hero-text-block {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .hero-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #A31D1D;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .hero-text-block h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 58px;
+            line-height: 1.1;
+            color: #2D2322;
+            margin-bottom: 25px;
+        }
+
+        .hero-text-block h1 .highlight {
+            color: #8B0000;
+            font-style: italic;
+        }
+
+        .hero-pitch {
+            font-size: 16px;
+            color: #5C4B4A;
+            margin-bottom: 35px;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: #2D2322;
+            color: #FFFDF0;
+            padding: 16px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-main:hover {
+            background-color: #4A3B3A;
+        }
+
+        /* Блок программ */
+        .programs-section {
+            padding: 80px 8%;
+            background-color: #FFFBF5;
+            text-align: center;
+            width: 100%;
+        }
+
+        .programs-heart {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .programs-tagline {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #7A6867;
+            margin-top: 10px;
+            background: #FFFDF0;
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
+            border: 1px solid #E6DFD3;
+        }
+
+        .programs-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+            flex-wrap: wrap;
+        }
+
+        .program-card {
+            background-color: #FFFDF0;
+            border: 1px solid #E6DFD3;
+            border-radius: 16px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding-bottom: 20px;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(139, 0, 0, 0.05);
+        }
+
+        .program-img-box {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .program-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .program-title {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #2D2322;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .programs-footer {
+            margin-top: 40px;
+        }
+
+        .programs-footer h3 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #4A3B3A;
+        }
+
+        .programs-footer p {
+            font-size: 15px;
+            color: #7A6867;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .banner-pill {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #B05B5B;
+            color: #FFFDF0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-style: italic;
+            padding: 12px 50px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(176, 91, 91, 0.2);
+        }
+
+        /* Разделитель */
+        .divider-stripes-zone {
+            width: 100%;
+            height: 14px;
+            overflow: hidden;
+            background-color: #FFFBF5;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #E6DFD3;
+            border-bottom: 1px solid #E6DFD3;
+        }
+
+        .narrow-stripe-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Каталог */
+        .catalog-section {
+            padding: 60px 5% 100px 5%;
+            background-color: #FFFBF5;
+            width: 100%;
+        }
+
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .catalog-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 46px;
+            color: #8B0000;
+        }
+
+        .catalog-subtitle {
+            font-size: 15px;
+            color: #7A6867;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .luxury-divider {
+            width: 140px;
+            height: 2px;
+            background-color: #8B0000;
+            margin: 15px auto 0 auto;
+        }
+
+        .catalog-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1300px;
+            margin: 40px auto 0 auto;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .catalog-column {
+            flex: 1;
+            min-width: 290px;
+            background-color: #FFFDF0;
+            border: 2px solid #8B0000;
+            padding: 40px 25px;
+            border-radius: 8px;
+            box-shadow: 8px 8px 0px rgba(139, 0, 0, 0.05);
+        }
+
+        .column-badge {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #8B0000;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #E6DFD3;
+            padding-bottom: 10px;
+        }
+
+        .class-list {
+            list-style: none;
+        }
+
+        .class-list li {
+            font-size: 15px;
+            font-weight: 600;
+            color: #4A3B3A;
+            padding: 11px 0;
+            border-bottom: 1px dashed #E6DFD3;
+        }
+
+        .class-list li:last-child {
+            border-bottom: none;
+        }
+
+        .catalog-center-art {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            margin-top: 20px;
+        }
+
+        .oval-frame {
+            width: 320px;
+            height: 420px;
+            border-radius: 160px;
+            overflow: hidden;
+            border: 3px solid #8B0000;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .oval-girl-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .center-signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 700;
+            color: #A31D1D;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Локация */
+        .location-section {
+            padding: 100px 8%;
+            background-color: #FFFBF5;
+            border-top: 1px solid #E6DFD3;
+            border-bottom: 1px solid #E6DFD3;
+            width: 100%;
+        }
+
+        .location-container-wide {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .location-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            color: #2D2322;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .location-desc-wide {
+            font-size: 18px;
+            color: #5C4B4A;
+            max-width: 800px;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .address-box-wide {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #FFFDF0;
+            padding: 24px 30px;
+            border-left: 6px solid #A31D1D;
+            border-radius: 4px;
+            max-width: 750px;
+            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.02);
+        }
+
+        .address-box-wide p {
+            font-size: 19px;
+            color: #2D2322;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .address-box-wide strong {
+            color: #8B0000;
+        }
+
+        .geo-marker {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        /* Контакты */
+        .booking-section {
+            padding: 100px 5%;
+            background-color: #FFFBF5;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .booking-card {
+            background-color: #FFFDF0;
+            border: 2px solid #2D2322;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 12px 12px 0px #A31D1D;
+        }
+
+        .hanging-phone-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 160px;
+            flex: 1;
+        }
+
+        .clean-phone-box {
+            width: 160px;
+            height: 240px;
+            background-image: url('phone.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            mix-blend-mode: multiply;
+            animation: sway 2.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+            100% { transform: rotate(-8deg); }
+        }
+
+        .booking-content {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .booking-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            color: #8B0000;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #A31D1D;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .schedule-desc {
+            color: #5C4B4A;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .time-table {
+            background: #FFFBF5;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            border: 1px solid #E6DFD3;
+        }
+
+        .time-label {
+            color: #7A6867;
+        }
+
+        .time-value {
+            color: #A31D1D;
+        }
+
+        .phones-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .phone-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .master-name {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #7A6867;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .phone-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #A31D1D;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+        .btn-contact-action {
+            display: inline-block;
+            background-color: #A31D1D;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            box-shadow: 0 4px 0 #5A0000;
+            transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+            text-align: center;
+        }
+
+        .btn-contact-action:hover {
+            background-color: #8B0000;
+        }
+
+        .btn-contact-action:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #5A0000;
+        }
+
+        /* Футер */
+        .footer-retro {
+            background-color: #2D2322;
+            color: #FFFDF0;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 13px;
+            width: 100%;
+        }
+
+        /* ============================================
+           МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px)
+           ============================================ */
+        @media (max-width: 768px) {
+            /* ШАПКА */
+            .navbar {
+                flex-direction: column !important;
+                gap: 12px !important;
+                padding: 15px 4% !important;
+                text-align: center !important;
+                align-items: center !important;
+                position: relative !important;
+            }
+
+            .logo {
+                font-size: 22px !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .nav-container {
+                width: 100% !important;
+            }
+
+            .nav-links {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 8px 15px !important;
+                padding: 0 !important;
+            }
+
+            .nav-links a {
+                font-size: 11px !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            .btn-book {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 12px 0 !important;
+                font-size: 12px !important;
+            }
+
+            /* ГЛАВНЫЙ ЭКРАН */
+            .hero {
+                padding: 30px 4% !important;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse !important;
+                gap: 25px !important;
+            }
+
+            .hero-image-wrapper {
+                flex: none !important;
+                width: 100% !important;
+                max-width: 300px !important;
+                margin: 0 auto !important;
+                min-width: unset !important;
+            }
+
+            .hero-logo-img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .hero-text-block {
+                flex: none !important;
+                width: 100% !important;
+                min-width: unset !important;
+                text-align: center !important;
+            }
+
+            .hero-tag {
+                font-size: 10px !important;
+                letter-spacing: 2px !important;
+            }
+
+            .hero-text-block h1 {
+                font-size: 32px !important;
+                line-height: 1.2 !important;
+            }
+
+            .hero-pitch {
+                font-size: 14px !important;
+                margin-bottom: 25px !important;
+            }
+
+            .btn-main {
+                width: 100% !important;
+                text-align: center !important;
+                padding: 14px 20px !important;
+                font-size: 11px !important;
+            }
+
+            /* ПРОГРАММЫ */
+            .programs-section {
+                padding: 40px 4% !important;
+            }
+
+            .catalog-header h2 {
+                font-size: 32px !important;
+            }
+
+            .programs-tagline {
+                font-size: 9px !important;
+                padding: 4px 12px !important;
+                letter-spacing: 2px !important;
+            }
+
+            .programs-grid {
+                gap: 20px !important;
+                margin: 30px auto !important;
+            }
+
+            .program-card {
+                width: 100% !important;
+                min-width: unset !important;
+                max-width: 360px !important;
+                margin: 0 auto !important;
+            }
+
+            .program-title {
+                font-size: 13px !important;
+                padding: 0 10px !important;
+            }
+
+            .banner-pill {
+                font-size: 18px !important;
+                padding: 12px 20px !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                border-radius: 20px !important;
+            }
+
+            .programs-footer h3 {
+                font-size: 14px !important;
+            }
+
+            .programs-footer p {
+                font-size: 13px !important;
+            }
+
+            /* РАЗДЕЛИТЕЛЬ */
+            .divider-stripes-zone {
+                height: 10px !important;
+            }
+
+            /* КАТАЛОГ */
+            .catalog-section {
+                padding: 40px 4% 60px 4% !important;
+            }
+
+            .catalog-header h2 {
+                font-size: 32px !important;
+            }
+
+            .catalog-layout {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+            }
+
+            .catalog-column {
+                width: 100% !important;
+                min-width: unset !important;
+                padding: 25px 18px !important;
+                box-shadow: 4px 4px 0px rgba(139, 0, 0, 0.05) !important;
+            }
+
+            .column-badge {
+                font-size: 26px !important;
+            }
+
+            .class-list li {
+                font-size: 13px !important;
+                padding: 9px 0 !important;
+            }
+
+            .catalog-center-art {
+                flex: none !important;
+                min-width: unset !important;
+                width: 100% !important;
+                margin-top: 0 !important;
+                order: -1 !important;
+            }
+
+            .oval-frame {
+                width: 260px !important;
+                height: 340px !important;
+                border-radius: 130px !important;
+            }
+
+            .center-signature {
+                font-size: 18px !important;
+            }
+
+            /* ЛОКАЦИЯ */
+            .location-section {
+                padding: 50px 4% !important;
+            }
+
+            .location-section h2 {
+                font-size: 32px !important;
+                text-align: center !important;
+            }
+
+            .location-desc-wide {
+                font-size: 15px !important;
+                text-align: center !important;
+                max-width: 100% !important;
+            }
+
+            .address-box-wide {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                padding: 18px 20px !important;
+                border-left-width: 4px !important;
+                max-width: 100% !important;
+            }
+
+            .address-box-wide p {
+                font-size: 15px !important;
+            }
+
+            .geo-marker {
+                font-size: 28px !important;
+            }
+
+            /* КОНТАКТЫ */
+            .booking-section {
+                padding: 50px 4% !important;
+            }
+
+            .booking-card {
+                flex-direction: column !important;
+                padding: 25px 18px !important;
+                gap: 20px !important;
+                box-shadow: 6px 6px 0px #A31D1D !important;
+                border-width: 1px !important;
+            }
+
+            .hanging-phone-container {
+                min-width: unset !important;
+                flex: none !important;
+                width: 100% !important;
+            }
+
+            .clean-phone-box {
+                width: 120px !important;
+                height: 180px !important;
+                margin: 0 auto !important;
+            }
+
+            .booking-content {
+                flex: none !important;
+                min-width: unset !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .booking-content h2 {
+                font-size: 28px !important;
+            }
+
+            .status-badge {
+                font-size: 9px !important;
+                padding: 4px 10px !important;
+            }
+
+            .schedule-desc {
+                font-size: 14px !important;
+                text-align: center !important;
+            }
+
+            .time-table {
+                flex-direction: column !important;
+                gap: 3px !important;
+                padding: 12px !important;
+                text-align: center !important;
+                font-size: 14px !important;
+            }
+
+            .phones-grid {
+                flex-direction: column !important;
+                gap: 25px !important;
+                align-items: center !important;
+            }
+
+            .phone-item {
+                width: 100% !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .master-name {
+                font-size: 11px !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            .phone-number {
+                font-size: 20px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .btn-contact-action {
+                width: 100% !important;
+                max-width: 240px !important;
+                padding: 10px 15px !important;
+                font-size: 10px !important;
+            }
+
+            /* ФУТЕР */
+            .footer-retro {
+                padding: 30px 20px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        /* ============================================
+           ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px)
+           ============================================ */
+        @media (max-width: 480px) {
+            .hero-text-block h1 {
+                font-size: 26px !important;
+            }
+
+            .catalog-header h2 {
+                font-size: 26px !important;
+            }
+
+            .location-section h2 {
+                font-size: 26px !important;
+            }
+
+            .booking-content h2 {
+                font-size: 24px !important;
+            }
+
+            .oval-frame {
+                width: 220px !important;
+                height: 290px !important;
+                border-radius: 110px !important;
+            }
+
+            .phone-number {
+                font-size: 18px !important;
+            }
+
+            .nav-links a {
+                font-size: 10px !important;
+            }
+
+            .nav-links {
+                gap: 5px 10px !important;
+            }
+
+            .program-card {
+                max-width: 100% !important;
+            }
+
+            .banner-pill {
+                font-size: 16px !important;
+                padding: 10px 15px !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -54,47 +1053,36 @@
         </div>
 
         <div class="programs-grid">
-            <!-- 1. День рождения -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-1.webp" alt="День рождения">
                 </div>
                 <div class="program-title">ДЕНЬ РОЖДЕНИЯ</div>
             </div>
-
-            <!-- 2. Тематические встречи -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-2.webp" alt="Тематические встречи">
                 </div>
                 <div class="program-title">ТЕМАТИЧЕСКИЕ ВСТРЕЧИ</div>
             </div>
-
-            <!-- 3. Корпоратив -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-3.webp" alt="Корпоратив">
                 </div>
                 <div class="program-title">КОРПОРАТИВ</div>
             </div>
-
-            <!-- 4. Девичник -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-4.webp" alt="Девичник">
                 </div>
                 <div class="program-title">ДЕВИЧНИК</div>
             </div>
-
-            <!-- 5. Детский праздник -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-5.webp" alt="Детский праздник">
                 </div>
                 <div class="program-title">ДЕТСКИЙ ПРАЗДНИК</div>
             </div>
-
-            <!-- 6. Свидания -->
             <div class="program-card">
                 <div class="program-img-box">
                     <img src="i-6.webp" alt="Свидания">
@@ -124,7 +1112,6 @@
         </div>
 
         <div class="catalog-layout">
-            <!-- Детям -->
             <div id="kids-dir" class="catalog-column">
                 <div class="column-badge">Детям</div>
                 <ul class="class-list">
@@ -139,7 +1126,6 @@
                 </ul>
             </div>
 
-            <!-- Девочка в овале по центру -->
             <div class="catalog-center-art">
                 <div class="oval-frame">
                     <img src="girl.jpg" alt="Вдохновение" class="oval-girl-img">
@@ -147,7 +1133,6 @@
                 <div class="center-signature">Для детей и взрослых</div>
             </div>
 
-            <!-- Взрослым -->
             <div id="adults-dir" class="catalog-column">
                 <div class="column-badge">Взрослым</div>
                 <ul class="class-list">
@@ -161,62 +1146,4 @@
                     <li>Объемные фактурные картины</li>
                     <li>Декупаж шкатулок</li>
                     <li>Мозаика фигурная премиум</li>
-                    <li>Стильные сумки из бисера</li>
-                    <li>Тафтинг (создание ковров)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Локация -->
-    <section id="location" class="location-section">
-        <div class="location-container-wide">
-            <h2>Где рождаются впечатления?</h2>
-            <p class="location-desc-wide">Мы находимся в самом сердце деловой жизни города, но переступая наш порог, вы попадаете в оазис спокойствия и красоты.</p>
-            
-            <div class="address-box-wide">
-                <span class="geo-marker">📍</span>
-                <p><strong>Адрес пространства:</strong> г. Апрелевка, улица Апрелевская 65Б /2, ДЦ Сириус, 4 этаж, кабинет 402/5</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contacts" class="booking-section">
-        <div class="booking-card">
-            <div class="hanging-phone-container">
-                <div class="clean-phone-box"></div>
-            </div>
-
-            <div class="booking-content">
-                <h2>Посещение пространства</h2>
-                <div class="status-badge">ТОЛЬКО ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ</div>
-                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем индивидуальный график приема.</p>
-
-                <div class="time-table">
-                    <span class="time-label">Прием звонков и гостей:</span>
-                    <span class="time-value">С 9:30 до 19:00</span>
-                </div>
-
-                <div class="phones-grid">
-                    <div class="phone-item">
-                        <span class="master-name">Юлия</span>
-                        <a href="tel:+79099130410" class="phone-number">8-909-913-04-10</a>
-                        <a href="https://t.me" target="_blank" class="btn-contact-action">Написать в ТГ</a>
-                    </div>
-                    <div class="phone-item">
-                        <span class="master-name">Анна</span>
-                        <a href="tel:+79856820892" class="phone-number">8 (985) 682-08-92</a>
-                        <a href="https://max.ru" target="_blank" class="btn-contact-action">Написать в Макс</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-retro">
-        <p>© 2026 Мастерская Впечатлений. Все права защищены.</p>
-    </footer>
-
-</body>
-</html>
+                   
