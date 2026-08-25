@@ -144,7 +144,7 @@ body {
     border-radius: 4px;
 }
 
-/* Блок программ */
+/* Блок программ — ТЕПЕРЬ С ПОЛНЫМИ ФОТО */
 .programs-section {
     padding: 80px 8%;
     background-color: #FFFBF5;
@@ -198,14 +198,14 @@ body {
 
 .program-img-box {
     width: 100%;
-    height: 240px;
+    height: auto; /* Высота автоматическая, чтобы сохранить головы на фото */
     overflow: hidden;
 }
 
 .program-img-box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 .program-title {
@@ -539,11 +539,10 @@ body {
 
 .master-name {
     font-size: 12px;
-    text-transform: uppercase;
-    color: #7A6867;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
+text-transform: uppercase;
+color: #7A6867;
+font-weight: 700;
+letter-spacing: 1px;
 
 .phone-number {
     font-family: 'Cormorant Garamond', serif;
@@ -551,29 +550,32 @@ body {
     font-weight: 700;
     color: #2D2322;
     text-decoration: none;
+    margin-bottom: 12px;
 }
 
-.btn-vk-retro {
+/* Новые аккуратные кнопки под телефонами мастеров */
+.btn-contact-action {
     display: inline-block;
     background-color: #A31D1D;
     color: white;
-    padding: 16px 40px;
+    padding: 10px 18px;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 1px;
     border-radius: 4px;
-    box-shadow: 0 5px 0 #5A0000;
+    box-shadow: 0 4px 0 #5A0000;
     transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    text-align: center;
 }
 
-.btn-vk-retro:hover {
+.btn-contact-action:hover {
     background-color: #8B0000;
 }
 
-.btn-vk-retro:active {
-    transform: translateY(3px);
+.btn-contact-action:active {
+    transform: translateY(2px);
     box-shadow: 0 2px 0 #5A0000;
 }
 
@@ -585,7 +587,7 @@ body {
     font-size: 13px;
 }
 
-/* МОБИЛЬНАЯ АДАПТАЦИЯ */
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -593,20 +595,20 @@ body {
         padding: 15px 4%;
         text-align: center;
     }
-    
+
     .logo {
         font-size: 23px;
         width: 100%;
         text-align: center;
         display: block;
     }
-    
+
     .nav-links {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .btn-book {
         width: 100%;
         text-align: center;
@@ -615,34 +617,34 @@ body {
     .hero {
         padding: 40px 4%;
     }
-    
+
     .hero-container {
         flex-direction: column-reverse;
         gap: 30px;
     }
-    
+
     .hero-image-wrapper {
         width: 100%;
         max-width: 320px;
         margin: 0 auto;
     }
-    
+
     .hero-logo-img {
         width: 100%;
         height: auto;
         display: block;
     }
-    
+
     .hero-text-block {
         text-align: center;
         width: 100%;
     }
-    
+
     .hero-text-block h1 {
         font-size: 34px;
         line-height: 1.2;
     }
-    
+
     .btn-main {
         width: 100%;
         text-align: center;
@@ -661,16 +663,16 @@ body {
     .catalog-header h2 {
         font-size: 34px;
     }
-    
+
     .catalog-layout {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .catalog-column {
         width: 100%;
     }
-    
+
     .oval-frame {
         width: 280px;
         height: 370px;
@@ -679,22 +681,22 @@ body {
     .location-section {
         padding: 50px 4%;
     }
-    
+
     .location-section h2 {
         font-size: 34px;
     }
-    
+
     .location-desc-wide {
         font-size: 16px;
     }
-    
+
     .address-box-wide {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px;
     }
-    
+
     .address-box-wide p {
         font-size: 16px;
     }
@@ -702,40 +704,45 @@ body {
     .booking-section {
         padding: 50px 4%;
     }
-    
+
     .booking-card {
         flex-direction: column;
         padding: 25px 20px;
         gap: 25px;
     }
-    
+
     .booking-content {
         text-align: center;
         width: 100%;
     }
-    
+
     .booking-content h2 {
         font-size: 30px;
     }
-    
+
     .time-table {
         flex-direction: column;
         gap: 5px;
         padding: 12px;
     }
-    
+
     .phones-grid {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         align-items: center;
     }
-    
+
+    .phone-item {
+        width: 100%;
+        align-items: center;
+    }
+
     .phone-number {
         font-size: 22px;
     }
-    
-    .btn-vk-retro {
+
+    .btn-contact-action {
         width: 100%;
-        text-align: center;
+        max-width: 280px;
     }
 }
