@@ -87,6 +87,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 300px;
 }
 
 .hero-logo-img {
@@ -98,6 +99,7 @@ body {
 
 .hero-text-block {
     flex: 1.2;
+    min-width: 300px;
 }
 
 .hero-tag {
@@ -269,7 +271,7 @@ body {
     text-align: center;
 }
 
-/* СТИЛИ ДЛЯ ЛОКАЦИИ — КВАДРАТ УБРАН СОВСЕМ, ШРИФТЫ СТАЛИ КРУПНЕЕ И ЭЛЕГАНТНЕЕ */
+/* Локация */
 .location-section {
     padding: 100px 8%;
     background-color: #FFFBF5;
@@ -280,19 +282,19 @@ body {
 .location-container-wide {
     max-width: 1000px;
     margin: 0 auto;
-    text-align: left; /* Элегантное выравнивание по левому краю */
+    text-align: left;
 }
 
 .location-section h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 52px; /* Крупный, заметный заголовок */
+    font-size: 52px;
     color: #2D2322;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
 }
 
 .location-desc-wide {
-    font-size: 18px; /* Увеличенный размер шрифта для легкого чтения */
+    font-size: 18px;
     color: #5C4B4A;
     max-width: 800px;
     margin-bottom: 35px;
@@ -305,14 +307,14 @@ body {
     gap: 15px;
     background: #FFFDF0;
     padding: 24px 30px;
-    border-left: 6px solid #A31D1D; /* Изящный бордовый акцент слева */
+    border-left: 6px solid #A31D1D;
     border-radius: 4px;
     max-width: 750px;
     box-shadow: 0 4px 20px rgba(139,0,0,0.02);
 }
 
 .address-box-wide p {
-    font-size: 19px; /* Сделали сам текст адреса крупным */
+    font-size: 19px;
     color: #2D2322;
     margin: 0;
     line-height: 1.5;
@@ -477,4 +479,140 @@ body {
     text-align: center;
     padding: 40px 20px;
     font-size: 13px;
+}
+
+/* ==========================================================================
+   ПОЛНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (Для смартфонов и узких экранов)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Шапка сайта */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 4%;
+        text-align: center;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-book {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Главный экран */
+    .hero {
+        padding: 40px 4%;
+    }
+    
+    .hero-container {
+        flex-direction: column; /* Элементы встают друг под друга */
+        gap: 30px;
+    }
+    
+    .hero-text-block {
+        text-align: center;
+    }
+    
+    .hero-text-block h1 {
+        font-size: 36px; /* Уменьшаем шрифт заголовка на телефоне, чтобы он не вылезал */
+    }
+    
+    .btn-main {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Сетка каталога (Направления) */
+    .catalog-section {
+        padding: 40px 4% 60px 4%;
+    }
+    
+    /* Каталог (Направления) */
+    .catalog-header h2 {
+        font-size: 34px;
+    }
+    
+    .catalog-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .catalog-column {
+        width: 100%;
+    }
+    
+    .oval-frame {
+        width: 280px;
+        height: 370px;
+    }
+
+    /* Локация */
+    .location-section {
+        padding: 50px 4%;
+    }
+    
+    .location-section h2 {
+        font-size: 34px;
+    }
+    
+    .location-desc-wide {
+        font-size: 16px;
+    }
+    
+    .address-box-wide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .address-box-wide p {
+        font-size: 16px;
+    }
+
+    /* Контакты */
+    .booking-section {
+        padding: 50px 4%;
+    }
+    
+    .booking-card {
+        flex-direction: column;
+        padding: 25px 20px;
+        gap: 25px;
+    }
+    
+    .booking-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .booking-content h2 {
+        font-size: 30px;
+    }
+    
+    .time-table {
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px;
+    }
+    
+    .phones-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .phone-number {
+        font-size: 22px;
+    }
+    
+    .btn-vk-retro {
+        width: 100%;
+        text-align: center;
+    }
 }
