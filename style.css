@@ -1,150 +1,477 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мастерская Впечатлений</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    <!-- Шапка сайта -->
-    <header class="navbar">
-        <div class="logo">Мастерская Впечатлений</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">О НАС</a></li>
-                <li><a href="#master-classes">КЛАССЫ</a></li>
-                <li><a href="#location">ЛОКАЦИЯ</a></li>
-                <li><a href="#contacts">КОНТАКТЫ</a></li>
-            </ul>
-        </nav>
-        <a href="https://wa.me" target="_blank" class="btn-book">ЗАПИСАТЬСЯ</a>
-    </header>
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFBF5;
+    color: #2D2322;
+    line-height: 1.6;
+}
 
-    <!-- Главный экран — Идеальный журнальный стиль -->
-    <section id="about" class="hero">
-        <div class="hero-container">
-            <div class="hero-image-wrapper">
-                <img src="i.webp" alt="Мастерская Впечатлений" class="hero-logo-img">
-            </div>
-            <div class="hero-text-block">
-                <span class="hero-tag">ТВОРЧЕСТВО • ВДОХНОВЕНИЕ • РАДОСТЬ</span>
-                <h1>Создано руками —<br><span class="highlight">наполнено эмоциями</span></h1>
-                <p class="hero-pitch">Уникальное пространство в Апрелевке, где стираются границы между ремеслом и высоким искусством. Мы создаем atmosphere благородного уюта, где каждый гость открывает в себе творца.</p>
-                <a href="#master-classes" class="btn-main">ВЫБРАТЬ НАПРАВЛЕНИЕ</a>
-            </div>
-        </div>
-    </section>
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #FFFDF0;
+    border-bottom: 2px solid #8B0000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    <!-- Узкий полосатый разделитель перед направлениями -->
-    <div class="divider-stripes-zone">
-        <img src="stripes.webp" alt="Разделитель" class="narrow-stripe-img">
-    </div>
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #8B0000;
+    letter-spacing: 1px;
+}
 
-    <!-- Каталог направлений -->
-    <section id="master-classes" class="catalog-section">
-        <div class="catalog-header">
-            <h2>Наши Направления</h2>
-            <p class="catalog-subtitle">Искусство, рождающееся в ваших руках</p>
-            <div class="luxury-divider"></div>
-        </div>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
 
-        <div class="catalog-layout">
-            <!-- Детям -->
-            <div id="kids-dir" class="catalog-column">
-                <div class="column-badge">Детям</div>
-                <ul class="class-list">
-                    <li>Роспись авторских футболок</li>
-                    <li>Роспись холщовых шоперов</li>
-                    <li>Тай-Дай: яркая роспись фигур</li>
-                    <li>Тай-Дай: дизайнерские футболки</li>
-                    <li>Сложная фигурная мозаика</li>
-                    <li>Увлекательный декупаж</li>
-                    <li>Мыловарение с картинкой</li>
-                    <li>Создание памятных магнитов</li>
-                </ul>
-            </div>
+.nav-links a {
+    color: #4A3B3A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
 
-            <!-- Девочка в идеальном овале по центру -->
-            <div class="catalog-center-art">
-                <div class="oval-frame">
-                    <img src="girl.jpg" alt="Вдохновение" class="oval-girl-img">
-                </div>
-                <div class="center-signature">Для детей и взрослых</div>
-            </div>
+.nav-links a:hover {
+    color: #A31D1D;
+}
 
-            <!-- Взрослым — Ваши 5 новых аккуратных пунктов -->
-            <div id="adults-dir" class="catalog-column">
-                <div class="column-badge">Взрослым</div>
-                <ul class="class-list">
-                    <li>Магия огня и аромата (свечи)</li>
-                    <li>Аромат в интерьере (диффузоры)</li>
-                    <li>Зеркало как арт-объект</li>
-                    <li>Гипсовая живопись (роспись фигур)</li>
-                    <li>Новая русская матрешка</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.btn-book {
+    display: inline-block;
+    background-color: #A31D1D;
+    color: #FFFDF0;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 4px 0 #5A0000;
+}
 
-    <!-- Локация -->
-    <section id="location" class="location-section">
-        <div class="location-container">
-            <div class="location-info">
-                <h2>Где рождаются впечатления?</h2>
-                <p>Мы находимся в самом сердце деловой жизни города, но переступая наш порог, вы попадаете в оазис спокойствия и красоты.</p>
-                <div class="address-box">
-                    <span class="geo-marker">📍</span>
-                    <p><strong>Адрес пространства:</strong> г. Апрелевка, улица Апрелевская 65Б /2, ДЦ Сириус, 4 этаж</p>
-                </div>
-            </div>
-            <div class="map-wrapper">
-                <iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
-            </div>
-        </div>
-    </section>
+/* Главный экран (Журнальный стиль) */
+.hero {
+    padding: 80px 5%;
+    background-color: #FFFDF0;
+    border-bottom: 1px solid #E6DFD3;
+}
 
-    <!-- Контакты -->
-    <section id="contacts" class="booking-section">
-        <div class="booking-card">
-            <!-- Контейнер для качающегося телефона-маятника -->
-            <div class="hanging-phone-container">
-                <div class="clean-phone-box"></div>
-            </div>
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 
-            <div class="booking-content">
-                <h2>Посещение пространства</h2>
-                <div class="status-badge">ТОЛЬКО ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ</div>
-                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем индивидуальный график приема.</p>
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
-                <div class="time-table">
-                    <span class="time-label">Прием звонков и гостей:</span>
-                    <span class="time-value">С 9:30 до 19:00</span>
-                </div>
+/* Прямоугольная картинка-афиша слева */
+.hero-logo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(139,0,0,0.06);
+}
 
-                <div class="phones-grid">
-                    <div class="phone-item">
-                        <span class="master-name">Юлия</span>
-                        <a href="tel:+79099130410" class="phone-number">8-909-913-04-10</a>
-                    </div>
-                    <div class="phone-item">
-                        <span class="master-name">Анна</span>
-                        <a href="tel:+79856820892" class="phone-number">8 (985) 682-08-92</a>
-                    </div>
-                </div>
+.hero-text-block {
+    flex: 1.2;
+}
 
-                <div class="booking-actions">
-                    <!-- Новая строгая прямоугольная кнопка ВК вместо WhatsApp -->
-                    <a href="https://vk.com" target="_blank" class="btn-vk-retro">НАПИСАТЬ В ВК</a>
-                </div>
-            </div>
-        </div>
-    </section>
+.hero-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #A31D1D;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
 
-    <footer class="footer-retro">
-        <p>© 2026 Мастерская Впечатлений. Все права защищены.</p>
-    </footer>
+.hero-text-block h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    line-height: 1.1;
+    color: #2D2322;
+    margin-bottom: 25px;
+}
 
-</body>
-</html>
+.hero-text-block h1 .highlight {
+    color: #8B0000;
+    font-style: italic;
+}
+
+.hero-pitch {
+    font-size: 16px;
+    color: #5C4B4A;
+    margin-bottom: 35px;
+}
+
+/* Тёмная прямоугольная кнопка */
+.btn-main {
+    display: inline-block;
+    background-color: #2D2322;
+    color: #FFFDF0;
+    padding: 16px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+/* Узкая полоса разделителя */
+.divider-stripes-zone {
+    width: 100%;
+    height: 14px;
+    overflow: hidden;
+    background-color: #FFFBF5;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #E6DFD3;
+    border-bottom: 1px solid #E6DFD3;
+}
+
+.narrow-stripe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Каталог направлений */
+.catalog-section {
+    padding: 60px 5% 100px 5%;
+    background-color: #FFFBF5;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalog-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    color: #8B0000;
+}
+
+.catalog-subtitle {
+    font-size: 15px;
+    color: #7A6867;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.luxury-divider {
+    width: 140px;
+    height: 2px;
+    background-color: #8B0000;
+    margin: 15px auto 0 auto;
+}
+
+/* Сетка каталога */
+.catalog-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 40px auto 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.catalog-column {
+    flex: 1;
+    min-width: 290px;
+    background-color: #FFFDF0;
+    border: 2px solid #8B0000;
+    padding: 40px 25px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px rgba(139,0,0,0.05);
+}
+
+.column-badge {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E6DFD3;
+    padding-bottom: 10px;
+}
+
+.class-list {
+    list-style: none;
+}
+
+.class-list li {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A3B3A;
+    padding: 11px 0;
+    border-bottom: 1px dashed #E6DFD3;
+}
+
+/* Картинка по центру */
+.catalog-center-art {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    margin-top: 20px;
+}
+
+.oval-frame {
+    width: 320px;
+    height: 420px;
+    border-radius: 160px;
+    overflow: hidden;
+    border: 3px solid #8B0000;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.oval-girl-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.center-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    color: #A31D1D;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Локация */
+.location-section {
+    padding: 80px 5%;
+    background-color: #FFFBF5;
+    border-top: 1px solid #E6DFD3;
+    border-bottom: 1px solid #E6DFD3;
+}
+
+.location-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.location-info {
+    flex: 1;
+}
+
+.location-info h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    color: #2D2322;
+    margin-bottom: 20px;
+}
+
+.address-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    background: #FFFDF0;
+    padding: 20px;
+    border-left: 5px solid #A31D1D;
+    border-radius: 4px;
+}
+
+.map-wrapper {
+    flex: 1.2;
+    min-width: 320px;
+    height: 350px;
+    border: 3px solid #2D2322;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 10px 10px 0px #2D2322;
+}
+
+/* Контакты */
+.booking-section {
+    padding: 100px 5%;
+    background-color: #FFFBF5;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-card {
+    background-color: #FFFDF0;
+    border: 2px solid #2D2322;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 12px 12px 0px #A31D1D;
+}
+
+.hanging-phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+    flex: 1;
+}
+
+/* Плавная маятниковая анимация покачивания */
+.clean-phone-box {
+    width: 160px;
+    height: 240px;
+    background-image: url('phone.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+    animation: sway 2.5s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes sway {
+    0% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+    100% { transform: rotate(-8deg); }
+}
+
+.booking-content {
+    flex: 2;
+    min-width: 280px;
+}
+
+.booking-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #A31D1D;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.schedule-desc {
+    color: #5C4B4A;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.time-table {
+    background: #FFFBF5;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    border: 1px solid #E6DFD3;
+}
+
+.time-label { color: #7A6867; }
+.time-value { color: #A31D1D; }
+
+.phones-grid {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.phone-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.master-name {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #7A6867;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.phone-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2D2322;
+    text-decoration: none;
+}
+
+/* Строгая прямоугольная бордовая кнопка ВК */
+.btn-vk-retro {
+    display: inline-block;
+    background-color: #A31D1D;
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #5A0000;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-vk-retro:hover {
+    background-color: #8B0000;
+}
+
+.btn-vk-retro:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #5A0000;
+}
+
+.footer-retro {
+    background-color: #2D2322;
+    color: #FFFDF0;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+}
