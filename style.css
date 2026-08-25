@@ -144,7 +144,7 @@ body {
     border-radius: 4px;
 }
 
-/* Блок программ — ТЕПЕРЬ С ПОЛНЫМИ ФОТО */
+/* Блок программ */
 .programs-section {
     padding: 80px 8%;
     background-color: #FFFBF5;
@@ -198,7 +198,7 @@ body {
 
 .program-img-box {
     width: 100%;
-    height: auto; /* Высота автоматическая, чтобы сохранить головы на фото */
+    height: auto;
     overflow: hidden;
 }
 
@@ -539,33 +539,33 @@ body {
 
 .master-name {
     font-size: 12px;
-text-transform: uppercase;
-color: #7A6867;
-font-weight: 700;
-letter-spacing: 1px;
-
-.phone-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
+    text-transform: uppercase;
+    color: #7A6867;
     font-weight: 700;
-    color: #2D2322;
-    text-decoration: none;
-    margin-bottom: 12px;
+    letter-spacing: 1px;
 }
 
-/* Новые аккуратные кнопки под телефонами мастеров */
+.phone-number {
+font-family: 'Cormorant Garamond', serif;
+font-size: 26px;
+font-weight: 700;
+color: #A31D1D; /* Красивый бордовый цвет для самих номеров телефонов */
+text-decoration: none;
+margin-bottom: 12px;
+
+/* КРАСИВЫЕ КНОПКИ ПОД НОМЕРАМИ МАСТЕРОВ */
 .btn-contact-action {
     display: inline-block;
-    background-color: #A31D1D;
+    background-color: #A31D1D; /* Сочный бордовый под общую палитру */
     color: white;
-    padding: 10px 18px;
+    padding: 12px 22px;
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1px;
     border-radius: 4px;
-    box-shadow: 0 4px 0 #5A0000;
+    box-shadow: 0 4px 0 #5A0000; /* Объемная тень снизу */
     transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
     text-align: center;
 }
