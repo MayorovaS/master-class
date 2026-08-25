@@ -54,6 +54,7 @@ body {
 }
 
 .btn-book {
+    display: inline-block;
     background-color: #A31D1D;
     color: #FFFDF0;
     padding: 12px 25px;
@@ -66,7 +67,7 @@ body {
     box-shadow: 0 4px 0 #5A0000;
 }
 
-/* Главный экран */
+/* Главный экран — Восстановленный стиль как на фото 2 */
 .hero {
     padding: 80px 5%;
     background-color: #FFFDF0;
@@ -88,6 +89,7 @@ body {
     justify-content: center;
 }
 
+/* Большая прямоугольная картинка слева */
 .hero-logo-img {
     max-width: 100%;
     height: auto;
@@ -128,6 +130,7 @@ body {
     margin-bottom: 35px;
 }
 
+/* Строгая прямоугольная кнопка со второй фотографии */
 .btn-main {
     display: inline-block;
     background-color: #2D2322;
@@ -349,7 +352,7 @@ body {
     flex: 1;
 }
 
-/* Красивая маятниковая анимация плавного покачивания телефона */
+/* Плавная маятниковая анимация телефона */
 .clean-phone-box {
     width: 160px;
     height: 240px;
@@ -359,7 +362,7 @@ body {
     background-position: center;
     mix-blend-mode: multiply;
     animation: sway 2.5s ease-in-out infinite;
-    transform-origin: top center; /* Качается как подвешенный маятник */
+    transform-origin: top center;
 }
 
 @keyframes sway {
@@ -440,7 +443,7 @@ body {
     text-decoration: none;
 }
 
-/* Новая стильная бордовая кнопка ВК под палитру дизайна */
+/* Бордовая прямоугольная кнопка ВК */
 .btn-vk-retro {
     display: inline-block;
     background-color: #A31D1D;
