@@ -11,7 +11,7 @@ body {
     color: #2D2322;
     line-height: 1.6;
     width: 100%;
-    overflow-x: hidden; /* Защита от горизонтального скролла на смартфонах */
+    overflow-x: hidden;
 }
 
 /* Навигация */
@@ -537,14 +537,20 @@ body {
     border: 1px solid #E6DFD3;
 }
 
-.time-label { color: #7A6867; }
-.time-value { color: #A31D1D; }
+.time-label {
+    color: #7A6867;
+}
+
+.time-value {
+    color: #A31D1D;
+}
 
 .phones-grid {
     display: flex;
-gap: 30px;
-margin-bottom: 35px;
-flex-wrap: wrap;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
 
 .phone-item {
     display: flex;
@@ -593,6 +599,7 @@ flex-wrap: wrap;
     box-shadow: 0 2px 0 #5A0000;
 }
 
+/* Футер */
 .footer-retro {
     background-color: #2D2322;
     color: #FFFDF0;
@@ -602,64 +609,66 @@ flex-wrap: wrap;
     width: 100%;
 }
 
-/* ==========================================================================
-   ЖЕСТКАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (Для экранов телефонов)
-   ========================================================================== */
+/* ============================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px)
+   ============================================ */
 @media (max-width: 768px) {
-    /* Исправляем крен и наезды в шапке сайта */
+    /* ШАПКА */
     .navbar {
-        flex-direction: column !important; /* Перестраиваем шапку строго вертикально */
-        gap: 15px !important;
+        flex-direction: column !important;
+        gap: 12px !important;
         padding: 15px 4% !important;
         text-align: center !important;
         align-items: center !important;
+        position: relative !important;
     }
 
     .logo {
-        font-size: 24px !important; /* Уменьшаем текст, чтобы он не улетал влево */
+        font-size: 22px !important;
         text-align: center !important;
         width: 100% !important;
-        margin: 0 auto !important;
     }
 
     .nav-container {
         width: 100% !important;
-        justify-content: center !important;
     }
 
     .nav-links {
-        display: flex !important;
-        flex-direction: row !important; /* Ссылки меню выстраиваем в ряды */
-        flex-wrap: wrap !important; /* Разрешаем перенос ссылок на вторую строчку, если не влезают */
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 12px 20px !important;
-        width: 100% !important;
+        gap: 8px 15px !important;
+        padding: 0 !important;
     }
 
     .nav-links a {
-        font-size: 13px !important; /* Компактный размер ссылок на телефоне */
+        font-size: 11px !important;
+        letter-spacing: 0.5px !important;
     }
 
     .btn-book {
-        width: 100% !important; /* Кнопка "Записаться" растягивается на всю мобильную шапку */
+        width: 100% !important;
         text-align: center !important;
         padding: 12px 0 !important;
+        font-size: 12px !important;
     }
 
-    /* Главный экран */
+    /* ГЛАВНЫЙ ЭКРАН */
     .hero {
         padding: 30px 4% !important;
     }
 
     .hero-container {
-        flex-direction: column-reverse !important; /* Картинка строго наверх, текст вниз */
+        flex-direction: column-reverse !important;
         gap: 25px !important;
     }
 
     .hero-image-wrapper {
+        flex: none !important;
         width: 100% !important;
-        max-width: 310px !important;
+        max-width: 300px !important;
         margin: 0 auto !important;
+        min-width: unset !important;
     }
 
     .hero-logo-img {
@@ -668,113 +677,221 @@ flex-wrap: wrap;
     }
 
     .hero-text-block {
-        text-align: center !important;
+        flex: none !important;
         width: 100% !important;
+        min-width: unset !important;
+        text-align: center !important;
+    }
+
+    .hero-tag {
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
     }
 
     .hero-text-block h1 {
-        font-size: 32px !important; /* Адаптивный размер букв под экран смартфона */
+        font-size: 32px !important;
         line-height: 1.2 !important;
+    }
+
+    .hero-pitch {
+        font-size: 14px !important;
+        margin-bottom: 25px !important;
     }
 
     .btn-main {
         width: 100% !important;
         text-align: center !important;
+        padding: 14px 20px !important;
+        font-size: 11px !important;
     }
 
-    /* Программы */
+    /* ПРОГРАММЫ */
     .programs-section {
         padding: 40px 4% !important;
     }
 
+    .catalog-header h2 {
+        font-size: 32px !important;
+    }
+
+    .programs-tagline {
+        font-size: 9px !important;
+        padding: 4px 12px !important;
+        letter-spacing: 2px !important;
+    }
+
     .programs-grid {
         gap: 20px !important;
+        margin: 30px auto !important;
     }
 
     .program-card {
-        width: 100% !important; /* Карточки выстраиваются по одной в ряд */
+        width: 100% !important;
+        min-width: unset !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+    }
+
+    .program-title {
+        font-size: 13px !important;
+        padding: 0 10px !important;
     }
 
     .banner-pill {
-        font-size: 16px !important;
+        font-size: 18px !important;
         padding: 12px 20px !important;
         width: 100% !important;
-        display: block !important;
+        max-width: 320px !important;
         border-radius: 20px !important;
     }
 
-    /* Направления */
+    .programs-footer h3 {
+        font-size: 14px !important;
+    }
+
+    .programs-footer p {
+        font-size: 13px !important;
+    }
+
+    /* РАЗДЕЛИТЕЛЬ */
+    .divider-stripes-zone {
+        height: 10px !important;
+    }
+
+    /* КАТАЛОГ */
     .catalog-section {
-        padding: 40px 4% !important;
+        padding: 40px 4% 60px 4% !important;
     }
 
     .catalog-header h2 {
-        font-size: 34px !important;
+        font-size: 32px !important;
     }
 
     .catalog-layout {
         flex-direction: column !important;
-        gap: 25px !important;
+        align-items: center !important;
+        gap: 30px !important;
     }
 
     .catalog-column {
         width: 100% !important;
-        padding: 30px 20px !important;
+        min-width: unset !important;
+        padding: 25px 18px !important;
+        box-shadow: 4px 4px 0px rgba(139,0,0,0.05) !important;
+    }
+
+    .column-badge {
+        font-size: 26px !important;
+    }
+
+    .class-list li {
+        font-size: 13px !important;
+        padding: 9px 0 !important;
+    }
+
+    .catalog-center-art {
+        flex: none !important;
+        min-width: unset !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        order: -1 !important;
     }
 
     .oval-frame {
-        width: 270px !important;
-        height: 350px !important;
+        width: 260px !important;
+        height: 340px !important;
+        border-radius: 130px !important;
     }
 
-    /* Локация */
+    .center-signature {
+        font-size: 18px !important;
+    }
+
+    /* ЛОКАЦИЯ */
     .location-section {
-        padding: 40px 4% !important;
+        padding: 50px 4% !important;
     }
 
     .location-section h2 {
-        font-size: 34px !important;
+        font-size: 32px !important;
+        text-align: center !important;
     }
 
     .location-desc-wide {
         font-size: 15px !important;
+        text-align: center !important;
+        max-width: 100% !important;
     }
 
     .address-box-wide {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        padding: 20px !important;
+        padding: 18px 20px !important;
+        border-left-width: 4px !important;
+        max-width: 100% !important;
     }
 
     .address-box-wide p {
-        font-size: 16px !important;
+        font-size: 15px !important;
     }
 
-    /* Контакты */
+    .geo-marker {
+        font-size: 28px !important;
+    }
+
+    /* КОНТАКТЫ */
     .booking-section {
-        padding: 40px 4% !important;
+        padding: 50px 4% !important;
     }
 
     .booking-card {
         flex-direction: column !important;
-        padding: 25px 15px !important;
-        gap: 25px !important;
+        padding: 25px 18px !important;
+        gap: 20px !important;
+        box-shadow: 6px 6px 0px #A31D1D !important;
+        border-width: 1px !important;
+    }
+
+    .hanging-phone-container {
+        min-width: unset !important;
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    .clean-phone-box {
+        width: 120px !important;
+        height: 180px !important;
+        margin: 0 auto !important;
     }
 
     .booking-content {
-        text-align: center !important;
+        flex: none !important;
+        min-width: unset !important;
         width: 100% !important;
+        text-align: center !important;
     }
 
     .booking-content h2 {
         font-size: 28px !important;
     }
 
+    .status-badge {
+        font-size: 9px !important;
+        padding: 4px 10px !important;
+    }
+
+    .schedule-desc {
+        font-size: 14px !important;
+        text-align: center !important;
+    }
+
     .time-table {
         flex-direction: column !important;
-        gap: 5px !important;
+        gap: 3px !important;
         padding: 12px !important;
+        text-align: center !important;
+        font-size: 14px !important;
     }
 
     .phones-grid {
@@ -786,14 +903,74 @@ flex-wrap: wrap;
     .phone-item {
         width: 100% !important;
         align-items: center !important;
+        text-align: center !important;
+    }
+
+    .master-name {
+        font-size: 11px !important;
+        letter-spacing: 0.5px !important;
     }
 
     .phone-number {
-        font-size: 22px !important;
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
     }
 
     .btn-contact-action {
         width: 100% !important;
-        max-width: 280px !important;
+        max-width: 240px !important;
+        padding: 10px 15px !important;
+        font-size: 10px !important;
+    }
+
+    /* ФУТЕР */
+    .footer-retro {
+        padding: 30px 20px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* ============================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .hero-text-block h1 {
+        font-size: 26px !important;
+    }
+
+    .catalog-header h2 {
+        font-size: 26px !important;
+    }
+
+    .location-section h2 {
+        font-size: 26px !important;
+    }
+
+    .booking-content h2 {
+        font-size: 24px !important;
+    }
+
+    .oval-frame {
+        width: 220px !important;
+        height: 290px !important;
+        border-radius: 110px !important;
+    }
+
+    .phone-number {
+        font-size: 18px !important;
+    }
+
+    .nav-links a {
+        font-size: 10px !important;
+        gap: 5px 10px !important;
+    }
+
+    .program-card {
+        max-width: 100% !important;
+    }
+
+    .banner-pill {
+        font-size: 16px !important;
+        padding: 10px 15px !important;
     }
 }
