@@ -15,7 +15,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">О пространстве</a></li>
-                <li><a href="#master-classes">Направления</a></li>
+                <li><a href="#master-classes">Мастер-классы</a></li>
                 <li><a href="#location">Локация</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
@@ -24,68 +24,67 @@
     </header>
 
     <!-- Главный экран -->
-    <section id="about" class="hero-premium-maroon">
-        <div class="hero-content">
-            <div class="logo-matreshka-frame">
-                <!-- Точно прописана маленькая буква i.webp -->
-                <img src="i.webp" alt="Мастерская Впечатлений" class="matreshka-logo-img">
+    <section id="about" class="hero">
+        <div class="hero-container">
+            <div class="hero-image-wrapper">
+                <img src="i.webp" alt="Мастерская Впечатлений" class="hero-logo-img">
             </div>
-            <span class="hero-tag">Творческое пространство</span>
-            <h1>Создано руками —<br><span class="highlight-italic">наполнено эмоциями</span></h1>
-            <p class="hero-pitch">Премиальная арт-студия в Апрелевке. Место, где стираются границы между ремеслом и высоким искусством в атмосфере абсолютного уюта и вдохновения.</p>
-            <a href="#master-classes" class="btn-main-ivory">Выбрать направление</a>
+            <div class="hero-text-block">
+                <span class="hero-tag">Творчество • Вдохновение • Радость</span>
+                <h1>Создано руками —<br><span class="highlight">наполнено эмоциями</span></h1>
+                <p class="hero-pitch">Уникальное пространство в Апрелевке, где стираются границы между ремеслом и высоким искусством. Мы создаем atmosphere благородного уюта, где каждый гость открывает в себе творца.</p>
+                <a href="#master-classes" class="btn-main">Выбрать направление</a>
+            </div>
         </div>
     </section>
 
-    <!-- Бегущая строка -->
-    <div class="marquee-zone">
-        <div class="marquee-track">
-            <span>ТВОРЧЕСТВО • ВДОХНОВЕНИЕ • ЭСТЕТИКА • РАДОСТЬ • АТМОСФЕРА ДЛЯ ДУШИ • </span>
-            <span>ТВОРЧЕСТВО • ВДОХНОВЕНИЕ • ЭСТЕТИКА • РАДОСТЬ • АТМОСФЕРА ДЛЯ ДУШИ • </span>
-        </div>
+    <!-- Узкий полосатый разделитель перед направлениями -->
+    <div class="divider-stripes-zone">
+        <img src="stripes.webp" alt="Разделитель" class="narrow-stripe-img">
     </div>
 
-    <!-- Раздел направлений -->
+    <!-- Каталог направлений -->
     <section id="master-classes" class="catalog-section">
         <div class="catalog-header">
-            <h2>Наши <span>направления</span></h2>
+            <h2>Наши Направления</h2>
+            <p class="catalog-subtitle">Искусство, рождающееся в ваших руках</p>
             <div class="luxury-divider"></div>
         </div>
 
-        <div class="journal-layout-container">
-            <!-- Левая сторона: 3 фото -->
-            <div class="journal-photos-left">
-                <div class="journal-img-box"><img src="i-1.webp" alt="Детское творчество"></div>
-                <div class="journal-img-box"><img src="i-2.webp" alt="Создание свечей"></div>
-                <div class="journal-img-box"><img src="i-3.webp" alt="Прикладное искусство"></div>
+        <div class="catalog-layout">
+            <!-- Детям -->
+            <div id="kids-dir" class="catalog-column">
+                <div class="column-badge">Детям</div>
+                <ul class="class-list">
+                    <li>Роспись авторских футболок</li>
+                    <li>Роспись холщовых шоперов</li>
+                    <li>Тай-Дай: яркая роспись фигур</li>
+                    <li>Тай-Дай: дизайнерские футболки</li>
+                    <li>Сложная фигурная мозаика</li>
+                    <li>Увлекательный декупаж</li>
+                    <li>Мыловарение с картинкой</li>
+                    <li>Создание памятных магнитов</li>
+                </ul>
             </div>
 
-            <!-- Правая сторона: Списки -->
-            <div class="journal-lists-right">
-                <div class="journal-list-block">
-                    <span class="list-mini-badge">направление</span>
-                    <h3>Детские мастер-классы</h3>
-                    <ul class="cursive-class-list">
-                        <li>Роспись авторских футболок и холщовых шоперов</li>
-                        <li>Тай-Дай: яркая роспись фигур и дизайнерские футболки</li>
-                        <li>Сложная фигурная мозаика и увлекательный декупаж</li>
-                        <li>Мыловарение с картинкой и создание памятных магнитов</li>
-                    </ul>
+            <!-- Девочка в идеальном овале -->
+            <div class="catalog-center-art">
+                <div class="oval-frame">
+                    <img src="girl.jpg" alt="Вдохновение" class="oval-girl-img">
                 </div>
+                <div class="center-signature">Для детей и взрослых</div>
+            </div>
 
-                <div class="journal-list-block">
-                    <span class="list-mini-badge">направление</span>
-                    <h3>Взрослые мастер-классы</h3>
-                    <ul class="cursive-class-list">
-                        <li>Магия огня и аромата — создание интерьерных свечей</li>
-                        <li>Аромат в интерьере — изящные диффузоры и аромасаше</li>
-                        <li>Зеркало как арт-объект и декор зеркальных полотен</li>
-                        <li>Гипсовая живопись — детальная роспись гипсовых фигур</li>
-                        <li>Эксклюзивный концепт «Новая русская матрешка»</li>
-                        <li>Интерьерные картины акрилом, объемные фактурные полотна и поталь</li>
-                        <li>Стильные сумки из бисера и тафтинг (создание ковров)</li>
-                    </ul>
-                </div>
+            <!-- Взрослым (Обновленный список) -->
+            <div id="adults-dir" class="catalog-column">
+                <div class="column-badge">Взрослым</div>
+                <ul class="class-list">
+                    <li>Магия огня и аромата (свечи)</li>
+                    <li>Аромат в интерьере (диффузоры)</li>
+                    <li>Зеркало как арт-объект</li>
+                    <li>Гипсовая живопись (роспись фигур)</li>
+                    <li>Новая русская матрешка</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -93,18 +92,16 @@
     <!-- Локация -->
     <section id="location" class="location-section">
         <div class="location-container">
-            <div class="location-info-left">
-                <h2>Где рождаются <span>впечатления?</span></h2>
-                <p>Мы находимся в самом сердце деловой жизни города. Переступая наш порог, вы попадаете в оазис приватности, эстетики и красоты.</p>
+            <div class="location-info">
+                <h2>Где рождаются впечатления?</h2>
+                <p>Мы находимся в самом сердце деловой жизни города, но переступая наш порог, вы попадаете в оазис спокойствия и красоты.</p>
                 <div class="address-box">
                     <span class="geo-marker">📍</span>
-                    <p><strong>Адрес пространства:</strong><br>г. Апрелевка, улица Апрелевская 65Б /2,<br>ДЦ Сириус, 4 этаж</p>
+                    <p><strong>Адрес пространства:</strong> г. Апрелевка, улица Апрелевская 65Б /2, ДЦ Сириус, 4 этаж</p>
                 </div>
             </div>
-            <div class="location-girl-right">
-                <div class="location-oval-frame">
-                    <img src="girl.jpg" alt="Мастерская Впечатлений">
-                </div>
+            <div class="map-wrapper">
+                <iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0" allowfullscreen="true"></iframe>
             </div>
         </div>
     </section>
@@ -112,18 +109,19 @@
     <!-- Контакты -->
     <section id="contacts" class="booking-section">
         <div class="booking-card">
+            <!-- Контейнер для телефона -->
             <div class="hanging-phone-container">
-                <img src="phone.jpg" alt="Запись" class="clean-phone-img">
+                <div class="clean-phone-box"></div>
             </div>
 
             <div class="booking-content">
-                <h2>Посещение <span>пространства</span></h2>
-                <div class="status-badge">Только по предварительной записи</div>
-                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем строго индивидуальный график приема.</p>
-                
+                <h2>Посещение пространства</h2>
+                <div class="status-badge">ТОЛЬКО ПО ПРЕДВАРИТЕЛЬНОЙ ЗАПИСИ</div>
+                <p class="schedule-desc">Мы ценим приватность и комфорт каждого гостя, поэтому формируем индивидуальный график приема.</p>
+
                 <div class="time-table">
                     <span class="time-label">Прием звонков и гостей:</span>
-                    <span class="time-value">С 09:30 до 19:00</span>
+                    <span class="time-value">С 9:30 до 19:00</span>
                 </div>
 
                 <div class="phones-grid">
@@ -138,14 +136,15 @@
                 </div>
 
                 <div class="booking-actions">
-                    <a href="https://wa.me" target="_blank" class="btn-whatsapp-retro">Написать в WhatsApp</a>
+                    <!-- Обновленная кнопка ВК вместо старого WhatsApp -->
+                    <a href="https://vk.com" target="_blank" class="btn-vk-retro">НАПИСАТЬ В ВК</a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer-retro">
-        <p>© 2026 Мастерская Впечатлений. Все права защищены. Вдохновляем жить красиво.</p>
+        <p>© 2026 Мастерская Впечатлений. Все права защищены.</p>
     </footer>
 
 </body>
