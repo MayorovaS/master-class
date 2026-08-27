@@ -75,6 +75,12 @@ body {
     border-radius: 4px;
     box-shadow: 0 4px 0 #5A0000;
     flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-book:hover {
+    background-color: #8B0000;
+    transform: translateY(-1px);
 }
 
 /* Главный экран */
@@ -153,6 +159,12 @@ body {
     font-size: 12px;
     letter-spacing: 1px;
     border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-main:hover {
+    background-color: #4A3B3A;
+    transform: translateY(-1px);
 }
 
 /* Блок программ */
@@ -258,6 +270,11 @@ body {
     padding: 12px 50px;
     border-radius: 30px;
     box-shadow: 0 4px 15px rgba(176,91,91,0.2);
+    transition: transform 0.3s ease;
+}
+
+.banner-pill:hover {
+    transform: scale(1.02);
 }
 
 /* Разделитель */
@@ -351,6 +368,10 @@ body {
     color: #4A3B3A;
     padding: 11px 0;
     border-bottom: 1px dashed #E6DFD3;
+}
+
+.class-list li:last-child {
+    border-bottom: none;
 }
 
 .catalog-center-art {
@@ -485,7 +506,6 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    mix-blend-mode: multiply;
     animation: sway 2.5s ease-in-out infinite;
     transform-origin: top center;
 }
@@ -572,12 +592,17 @@ body {
     color: #A31D1D;
     text-decoration: none;
     margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.phone-number:hover {
+    color: #8B0000;
 }
 
 .btn-contact-action {
     display: inline-block;
     background-color: #A31D1D;
-    color: white;
+    color: #ffffff;
     padding: 12px 22px;
     text-decoration: none;
     font-weight: 700;
@@ -588,6 +613,7 @@ body {
     box-shadow: 0 4px 0 #5A0000;
     transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 .btn-contact-action:hover {
@@ -878,99 +904,5 @@ body {
 
     .status-badge {
         font-size: 9px !important;
-        padding: 4px 10px !important;
-    }
-
-    .schedule-desc {
-        font-size: 14px !important;
-        text-align: center !important;
-    }
-
-    .time-table {
-        flex-direction: column !important;
-        gap: 3px !important;
-        padding: 12px !important;
-        text-align: center !important;
-        font-size: 14px !important;
-    }
-
-    .phones-grid {
-        flex-direction: column !important;
-        gap: 25px !important;
-        align-items: center !important;
-    }
-
-    .phone-item {
-        width: 100% !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-
-    .master-name {
-        font-size: 11px !important;
-        letter-spacing: 0.5px !important;
-    }
-
-    .phone-number {
-        font-size: 20px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .btn-contact-action {
-        width: 100% !important;
-        max-width: 240px !important;
-        padding: 10px 15px !important;
-        font-size: 10px !important;
-    }
-
-    /* ФУТЕР */
-    .footer-retro {
-        padding: 30px 20px !important;
-        font-size: 12px !important;
-    }
-}
-
-/* ============================================
-   ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px)
-   ============================================ */
-@media (max-width: 480px) {
-    .hero-text-block h1 {
-        font-size: 26px !important;
-    }
-
-    .catalog-header h2 {
-        font-size: 26px !important;
-    }
-
-    .location-section h2 {
-        font-size: 26px !important;
-    }
-
-    .booking-content h2 {
-        font-size: 24px !important;
-    }
-
-    .oval-frame {
-        width: 220px !important;
-        height: 290px !important;
-        border-radius: 110px !important;
-    }
-
-    .phone-number {
-        font-size: 18px !important;
-    }
-
-    .nav-links a {
-        font-size: 10px !important;
-        gap: 5px 10px !important;
-    }
-
-    .program-card {
-        max-width: 100% !important;
-    }
-
-    .banner-pill {
-        font-size: 16px !important;
-        padding: 10px 15px !important;
-    }
-}
+        padding: 4px 10px
+    }}
