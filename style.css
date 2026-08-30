@@ -927,10 +927,13 @@ body {
 }
 
 .clean-phone-box {
-    background-image: url("phone.jpg") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
 }
 
 .hanging-phone-container {
